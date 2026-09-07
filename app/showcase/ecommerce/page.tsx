@@ -31,7 +31,7 @@ export default function EcommerceShowcasePage() {
             Open full live site <ExternalLink size={15} />
           </Link>
         </div>
-        <div className="overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] shadow-[0_28px_90px_rgba(0,0,0,0.32)]">
+        <div className="overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] shadow-[0_28px_90px_rgba(0,8,24,0.48)]">
           <div className="flex items-center justify-between border-b border-[var(--border)] px-5 py-4">
             <div>
               <p className="text-sm font-bold">Buy Best</p>

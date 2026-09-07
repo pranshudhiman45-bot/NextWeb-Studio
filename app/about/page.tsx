@@ -10,7 +10,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about NextWeb Studio and Vinay Kumar, the full-stack developer behind the independent development studio.",
+    "Learn about NextWeb Studio and Pranshu Dhiman, the full-stack developer behind the independent development studio.",
 };
 
 const values = [
@@ -42,14 +42,14 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About NextWeb Studio"
         title="Independent studio. Full-product perspective."
-        description="NextWeb Studio is the professional development identity of Vinay Kumar, focused on designing and building clear, dependable digital products."
+        description="NextWeb Studio is the professional development identity of Pranshu Dhiman, focused on designing and building clear, dependable digital products."
       />
       <section className="section-pad">
         <div className="container-shell grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <Reveal>
             <span className="eyebrow">About the developer</span>
             <h2 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl">
-              Vinay Kumar
+              Pranshu Dhiman
             </h2>
             <p className="mt-3 text-sm text-[var(--accent)]">
               Full Stack Developer · Founder, NextWeb Studio
@@ -114,7 +114,7 @@ export default function AboutPage() {
               ],
               [
                 "Founder",
-                "Vinay Kumar",
+                "Pranshu Dhiman",
                 "Full Stack Developer and the person responsible for the studio’s product thinking, design decisions, engineering, and delivery.",
               ],
               [

@@ -169,7 +169,7 @@ export default async function ProjectDetailPage({
             </Reveal>
             {project.details?.map((detail) => (
               <Reveal key={detail.title}>
-                <div className="rounded-2xl border border-[var(--border)] bg-white/[0.025] p-6 sm:p-7">
+                <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)]/68 p-6 sm:p-7">
                   <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
                     {detail.title}
                   </h2>

@@ -19,7 +19,7 @@ export function TechnologyGrid() {
             description="The studio chooses proven tools around your users, goals, and operating constraints—not trends for their own sake."
           />
         </Reveal>
-        <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-[var(--border)] bg-white/[0.08] sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--border)] sm:grid-cols-2 lg:grid-cols-4">
           {Object.entries(technologies).map(([category, items], index) => (
             <Reveal key={category} delay={index * 0.06} className="h-full">
               <motion.div

@@ -6,6 +6,7 @@ import {
   LockKeyhole,
   Settings,
 } from "lucide-react";
+import { BrandLogo } from "@/components/brand/brand-logo";
 import { projects } from "@/lib/projects";
 
 export const metadata: Metadata = {
@@ -38,14 +39,15 @@ export default function AdminPage() {
         </div>
         <div className="grid overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] lg:min-h-[680px] lg:grid-cols-[230px_1fr]">
           <aside className="border-b border-[var(--border)] p-6 lg:border-r lg:border-b-0">
-            <p className="text-lg font-extrabold tracking-tight">
-              NextWeb Studio Admin
+            <BrandLogo />
+            <p className="mt-4 text-[10px] font-bold tracking-[0.14em] text-[var(--foreground-muted)] uppercase">
+              Studio dashboard
             </p>
             <nav className="mt-8 grid gap-2" aria-label="Admin navigation">
               {navItems.map(([label, Icon], index) => (
                 <span
                   key={label}
-                  className={`flex items-center gap-3 rounded-xl px-3 py-3 text-sm ${index === 0 ? "bg-white/5 text-white" : "text-white/45"}`}
+                  className={`flex items-center gap-3 rounded-xl border px-3 py-3 text-sm ${index === 0 ? "border-[var(--border)] bg-[var(--surface-elevated)]/68 text-white" : "border-transparent text-white/45"}`}
                 >
                   <Icon size={17} />
                   {label}
@@ -89,7 +91,7 @@ export default function AdminPage() {
                     .map((project) => (
                       <div
                         key={project.slug}
-                        className="flex items-center justify-between rounded-xl bg-white/[0.025] p-4 text-sm"
+                        className="flex items-center justify-between rounded-xl border border-[var(--border)] bg-[var(--surface)]/52 p-4 text-sm"
                       >
                         <span>{project.title}</span>
                         <span className="rounded-full bg-[var(--accent)]/10 px-2 py-1 text-[10px] text-[var(--accent)]">

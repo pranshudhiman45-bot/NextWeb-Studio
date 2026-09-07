@@ -13,7 +13,7 @@ import {
 } from "@/lib/validations";
 
 const inputStyles =
-  "mt-2 min-h-12 w-full rounded-xl border border-[var(--border)] bg-white/[0.035] px-4 text-sm text-white transition placeholder:text-white/25 focus:border-[var(--accent)] focus:outline-none";
+  "mt-2 min-h-12 w-full rounded-xl border border-[var(--border)] bg-[var(--surface-elevated)]/52 px-4 text-sm text-white transition placeholder:text-white/30 focus:border-[var(--accent)] focus:shadow-[0_0_0_3px_rgba(8,124,255,0.1)] focus:outline-none";
 
 export function ContactForm({
   initialProjectType,
@@ -159,7 +159,7 @@ export function ContactForm({
         <button
           type="submit"
           disabled={isSubmitting}
-          className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 text-sm font-bold text-[var(--accent-ink)] transition-all hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:shadow-[0_8px_30px_rgba(200,255,61,0.14)] disabled:cursor-not-allowed disabled:opacity-60"
+          className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-blue-200/15 bg-[var(--accent)] px-6 text-sm font-bold text-white shadow-[0_8px_24px_rgba(0,126,255,0.16)] transition-all hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:shadow-[0_10px_32px_rgba(0,158,255,0.24)] disabled:cursor-not-allowed disabled:opacity-60"
         >
           {isSubmitting ? (
             <>
@@ -170,7 +170,7 @@ export function ContactForm({
           )}
         </button>
         <p className="text-xs text-white/35">
-          Your inquiry goes directly to Vinay Kumar.
+          Your inquiry goes directly to Pranshu Dhiman.
         </p>
       </div>
       {serverMessage ? (

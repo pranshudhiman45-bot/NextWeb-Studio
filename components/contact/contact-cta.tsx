@@ -6,8 +6,8 @@ export function ContactCta() {
     <section className="section-pad">
       <div className="container-shell">
         <div className="cta-panel relative overflow-hidden rounded-3xl px-6 py-14 sm:px-12 sm:py-20 lg:px-20">
-          <div className="pointer-events-none absolute -top-20 -right-16 size-64 rounded-full border border-white/[0.045]" />
-          <div className="pointer-events-none absolute top-8 right-6 size-36 rounded-full border border-[var(--accent)]/[0.07]" />
+          <div className="pointer-events-none absolute -top-20 -right-16 size-64 rounded-full border border-[var(--border)] opacity-35" />
+          <div className="pointer-events-none absolute top-8 right-6 size-36 rounded-full border border-[var(--cyan)]/10" />
           <div className="grid-lines pointer-events-none absolute top-0 right-0 h-56 w-80 opacity-[0.08]" />
           <p className="relative font-mono text-xs font-bold tracking-[0.15em] text-[var(--accent)] uppercase">
             Start a project

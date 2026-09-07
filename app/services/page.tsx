@@ -41,7 +41,7 @@ export default function ServicesPage() {
                       <span className="font-mono text-xs text-white/30">
                         0{index + 1}
                       </span>
-                      <div className="grid size-11 place-items-center rounded-xl bg-[var(--accent)]/10 text-[var(--accent)]">
+                      <div className="grid size-11 place-items-center rounded-xl border border-[var(--border)] bg-[var(--surface-elevated)]/62 text-[var(--cyan)]">
                         <Icon size={21} />
                       </div>
                     </div>
@@ -65,7 +65,7 @@ export default function ServicesPage() {
                         {technologies.map((technology) => (
                           <span
                             key={technology}
-                            className="rounded-full bg-white/5 px-3 py-1.5 text-xs text-white/60"
+                            className="rounded-full border border-[var(--border)] bg-[var(--surface-elevated)]/52 px-3 py-1.5 text-xs text-[var(--foreground-secondary)]"
                           >
                             {technology}
                           </span>

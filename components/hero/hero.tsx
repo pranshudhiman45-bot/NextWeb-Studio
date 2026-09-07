@@ -61,12 +61,14 @@ export function Hero() {
   return (
     <section className="relative flex min-h-[920px] items-center overflow-hidden pt-28 sm:min-h-screen">
       <div className="grid-lines pointer-events-none absolute inset-0 opacity-35" />
+      <div className="pointer-events-none absolute -top-36 right-[8%] size-[34rem] rounded-full bg-[radial-gradient(circle,rgba(0,126,255,0.13),transparent_68%)] blur-2xl max-sm:size-80 max-sm:opacity-65" />
+      <div className="pointer-events-none absolute bottom-[10%] left-[-12rem] size-[28rem] rounded-full bg-[radial-gradient(circle,rgba(16,217,245,0.055),transparent_70%)] blur-3xl max-sm:hidden" />
       <div className="container-shell relative grid items-center gap-14 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:py-24">
         <div>
           <motion.div
             initial={reduced ? false : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/[0.09] bg-black/35 px-3 py-2 text-xs font-semibold text-white/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.035)] backdrop-blur-xl"
+            className="mb-7 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface)]/72 px-3 py-2 text-xs font-semibold text-[var(--foreground-secondary)] shadow-[inset_0_1px_0_rgba(133,194,255,0.06)] backdrop-blur-xl"
           >
             <span className="size-2 rounded-full bg-[var(--accent)] shadow-[0_0_14px_var(--accent)]" />
             NextWeb Studio
@@ -78,7 +80,9 @@ export function Hero() {
             className="display-title max-w-4xl"
           >
             We build digital products that{" "}
-            <span className="text-[var(--accent)]">perform.</span>
+            <span className="bg-gradient-to-r from-[var(--accent)] to-[var(--cyan)] bg-clip-text text-transparent">
+              grow your business.
+            </span>
           </motion.h1>
           <motion.p
             initial={reduced ? false : { opacity: 0, y: 20 }}
@@ -86,18 +90,18 @@ export function Hero() {
             transition={{ delay: 0.16, duration: 0.65 }}
             className="muted-copy mt-7 max-w-2xl text-base sm:text-lg"
           >
-            NextWeb Studio is an independent development studio by Vinay Kumar,
-            building modern websites, full-stack applications, SaaS platforms,
-            e-commerce experiences and AI-powered products.
+            NextWeb Studio is an independent development studio by Pranshu
+            Dhiman, building modern websites, full-stack applications, SaaS
+            platforms, e-commerce experiences and AI-powered products.
           </motion.p>
           <motion.div
             initial={reduced ? false : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.55 }}
-            className="mt-5 inline-flex items-center gap-3 rounded-full border border-white/[0.08] bg-white/[0.025] px-4 py-2 text-xs text-white/55 backdrop-blur-lg"
+            className="mt-5 inline-flex items-center gap-3 rounded-full border border-[var(--border)] bg-[var(--surface)]/58 px-4 py-2 text-xs text-[var(--foreground-secondary)] backdrop-blur-lg"
           >
             <span className="size-1.5 rounded-full bg-[var(--accent)]" />
-            Built by Vinay Kumar · Full Stack Developer
+            Built by Pranshu Dhiman · Full Stack Developer
           </motion.div>
           <div className="mt-6 flex min-h-8 items-center gap-3 font-mono text-xs tracking-[0.15em] text-white/50 uppercase sm:text-sm">
             <span className="text-[var(--accent)]">{"//"}</span>
@@ -146,10 +150,10 @@ export function Hero() {
             onPointerLeave={resetPointerEffect}
           >
             <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-1/2 bg-gradient-to-b from-white/[0.035] to-transparent" />
-            <div className="pointer-events-none absolute -right-20 -bottom-20 z-0 size-64 rounded-full bg-[var(--accent)]/[0.055] blur-3xl" />
+            <div className="pointer-events-none absolute -right-20 -bottom-20 z-0 size-64 rounded-full bg-[var(--accent)]/[0.10] blur-3xl" />
             <motion.div
               aria-hidden="true"
-              className="hero-spotlight pointer-events-none absolute z-0 hidden size-64 rounded-full bg-[radial-gradient(circle,rgba(200,255,61,0.10),transparent_68%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              className="hero-spotlight pointer-events-none absolute z-0 hidden size-64 rounded-full bg-[radial-gradient(circle,rgba(16,217,245,0.12),rgba(0,126,255,0.045)_38%,transparent_70%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               style={{ x: glowX, y: glowY, marginLeft: -128, marginTop: -128 }}
             />
             <div className="relative z-10 flex items-center justify-between border-b border-white/[0.08] px-5 py-4">
@@ -183,7 +187,7 @@ export function Hero() {
                 ].map(([value, label]) => (
                   <motion.div
                     key={label}
-                    className="rounded-2xl border border-white/[0.08] bg-white/[0.035] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.025)] backdrop-blur-md transition-colors hover:border-white/[0.16] hover:bg-white/[0.05]"
+                    className="rounded-2xl border border-[var(--border)] bg-[var(--surface-elevated)]/62 p-4 shadow-[inset_0_1px_0_rgba(133,194,255,0.05)] backdrop-blur-md transition-colors hover:border-[var(--border-hover)] hover:bg-[var(--surface-strong)]/68"
                     whileHover={reduced ? undefined : { y: -2 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
                   >
@@ -196,22 +200,23 @@ export function Hero() {
                   </motion.div>
                 ))}
               </div>
-              <div className="rounded-2xl border border-white/[0.08] bg-black/45 p-5 font-mono text-xs leading-7 text-white/55 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] backdrop-blur-lg">
+              <div className="rounded-2xl border border-[var(--border)] bg-[#020b18]/72 p-5 font-mono text-xs leading-7 text-[var(--foreground-secondary)] shadow-[inset_0_1px_0_rgba(133,194,255,0.04)] backdrop-blur-lg">
                 <p>
-                  <span className="text-purple-300">const</span> product ={" "}
-                  <span className="text-sky-300">await</span> build&#40;&#123;
+                  <span className="text-blue-300">const</span> product ={" "}
+                  <span className="text-[var(--cyan)]">await</span>{" "}
+                  build&#40;&#123;
                 </p>
                 <p className="pl-5">
                   strategy:{" "}
-                  <span className="text-amber-200">&quot;clear&quot;</span>,
+                  <span className="text-blue-200">&quot;clear&quot;</span>,
                 </p>
                 <p className="pl-5">
                   experience:{" "}
-                  <span className="text-amber-200">&quot;polished&quot;</span>,
+                  <span className="text-blue-200">&quot;polished&quot;</span>,
                 </p>
                 <p className="pl-5">
                   engineering:{" "}
-                  <span className="text-amber-200">&quot;resilient&quot;</span>
+                  <span className="text-blue-200">&quot;resilient&quot;</span>
                 </p>
                 <p>&#125;&#41;;</p>
               </div>

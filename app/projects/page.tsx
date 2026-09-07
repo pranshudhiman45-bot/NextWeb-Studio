@@ -9,7 +9,7 @@ import { projects } from "@/lib/projects";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Explore real projects and working applications built by Vinay Kumar and presented through NextWeb Studio.",
+    "Explore real projects and working applications built by Pranshu Dhiman and presented through NextWeb Studio.",
 };
 
 export default function ProjectsPage() {
@@ -18,7 +18,7 @@ export default function ProjectsPage() {
       <PageHero
         eyebrow="Projects and products"
         title="Selected work, built for real use."
-        description="Real projects and working applications built by Vinay Kumar and presented through NextWeb Studio, with factual case studies and live links."
+        description="Real projects and working applications built by Pranshu Dhiman and presented through NextWeb Studio, with factual case studies and live links."
       />
       <section className="section-pad">
         <div className="container-shell">

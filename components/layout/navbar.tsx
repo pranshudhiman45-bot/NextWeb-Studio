@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { BrandLogo } from "@/components/brand/brand-logo";
 import { cn, siteConfig } from "@/lib/utils";
 
 const links = [
@@ -32,18 +33,13 @@ export function Navbar() {
         className={cn(
           "container-shell pointer-events-auto flex h-20 items-center justify-between border border-transparent px-0 transition-all duration-300",
           scrolled || open
-            ? "mt-3 h-16 rounded-full border-[var(--border)] bg-[#080a0b]/75 px-5 shadow-[0_12px_42px_rgba(0,0,0,0.28)] backdrop-blur-xl sm:px-6"
+            ? "mt-3 h-16 rounded-full border-[var(--border)] bg-[#020b18]/82 px-4 shadow-[0_14px_46px_rgba(0,8,24,0.48),0_0_34px_rgba(0,126,255,0.045)] backdrop-blur-xl sm:px-5"
             : "mt-0",
         )}
         aria-label="Primary navigation"
       >
-        <Link
-          href="/"
-          className="relative z-50 text-base font-extrabold tracking-[-0.045em] sm:text-lg"
-        >
-          NextWeb <span className="text-[var(--accent)]">Studio</span>
-          <span className="sr-only"> — {siteConfig.founder}</span>
-        </Link>
+        <BrandLogo className="relative z-50" />
+        <span className="sr-only">Built by {siteConfig.founder}</span>
 
         <div className="hidden items-center gap-7 lg:flex">
           {links.map(([label, href]) => {
@@ -70,7 +66,7 @@ export function Navbar() {
           })}
           <Link
             href="/contact"
-            className="rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-bold text-[var(--accent-ink)] transition-all hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:shadow-[0_8px_28px_rgba(200,255,61,0.14)]"
+            className="rounded-full border border-blue-200/15 bg-[var(--accent)] px-5 py-3 text-sm font-bold text-white shadow-[0_8px_24px_rgba(0,126,255,0.16)] transition-all hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:shadow-[0_10px_30px_rgba(0,158,255,0.24)]"
           >
             Start a Project
           </Link>
@@ -78,7 +74,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="relative z-50 grid size-11 place-items-center rounded-full border border-white/15 lg:hidden"
+          className="relative z-50 grid size-11 place-items-center rounded-full border border-[var(--border)] bg-[var(--surface)]/70 text-white lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-navigation"
           aria-label={open ? "Close navigation" : "Open navigation"}
@@ -102,7 +98,7 @@ export function Navbar() {
         {open ? (
           <motion.div
             id="mobile-navigation"
-            className="container-shell pointer-events-auto mt-2 overflow-hidden rounded-2xl border border-[var(--border)] bg-[#080a0b]/85 shadow-[0_18px_50px_rgba(0,0,0,0.3)] backdrop-blur-2xl lg:hidden"
+            className="container-shell pointer-events-auto mt-2 overflow-hidden rounded-2xl border border-[var(--border)] bg-[#020b18]/92 shadow-[0_18px_50px_rgba(0,8,24,0.5)] backdrop-blur-2xl lg:hidden"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}

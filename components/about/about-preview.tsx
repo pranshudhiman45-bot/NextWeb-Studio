@@ -21,7 +21,7 @@ export function AboutPreview() {
         </Reveal>
         <Reveal delay={0.08}>
           <p className="muted-copy text-lg">
-            NextWeb Studio is the development studio of Vinay Kumar, working
+            NextWeb Studio is the development studio of Pranshu Dhiman, working
             across product thinking, interface design, and full-stack
             engineering.
           </p>

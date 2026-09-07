@@ -19,9 +19,9 @@ export function ButtonLink({
 }: ButtonLinkProps) {
   const styles = {
     primary:
-      "bg-[var(--accent)] text-[var(--accent-ink)] hover:bg-[var(--accent-hover)] hover:shadow-[0_8px_30px_rgba(200,255,61,0.14)] hover:-translate-y-0.5 border-transparent",
+      "bg-[var(--accent)] text-white hover:bg-[var(--accent-hover)] hover:shadow-[0_10px_32px_rgba(0,158,255,0.24)] hover:-translate-y-0.5 border-blue-200/15 shadow-[0_8px_24px_rgba(0,126,255,0.16)]",
     secondary:
-      "border-[var(--border)] bg-white/[0.025] text-white hover:border-[var(--accent)]/55 hover:bg-white/[0.045] hover:text-[var(--accent)]",
+      "border-[var(--border)] bg-[var(--surface)]/65 text-white hover:border-[var(--border-hover)] hover:bg-[var(--surface-elevated)]/75 hover:text-[var(--cyan)]",
     text: "border-transparent text-white hover:text-[var(--accent)] px-0",
   };
 

@@ -12,7 +12,7 @@ export function FeaturedProjects() {
           <SectionHeading
             eyebrow="Selected work"
             title="Proof lives in the product."
-            description="Real projects and working applications built by Vinay Kumar and presented through NextWeb Studio."
+            description="Real projects and working applications built by Pranshu Dhiman and presented through NextWeb Studio."
           />
           <ButtonLink
             href="/projects"

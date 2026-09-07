@@ -11,7 +11,7 @@ import { getProjectTypeFromQuery } from "@/lib/validations";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Tell Vinay Kumar what you are building and discuss how NextWeb Studio can help.",
+    "Tell Pranshu Dhiman what you are building and discuss how NextWeb Studio can help.",
 };
 
 const allowedSources = new Set([
@@ -60,7 +60,7 @@ export default async function ContactPage({
                 Work directly with the founder.
               </h2>
               <p className="muted-copy mt-4 text-sm">
-                Every inquiry goes directly to Vinay Kumar. Use the project
+                Every inquiry goes directly to Pranshu Dhiman. Use the project
                 brief for the most useful response.
               </p>
               <div className="mt-8 grid gap-3">

@@ -1,6 +1,6 @@
 # NextWeb Studio
 
-NextWeb Studio is the portfolio and independent development-studio website of Vinay Kumar. It presents the studio's services, real project work, and interactive showcase applications through a responsive full-stack Next.js experience.
+NextWeb Studio is the portfolio and independent development-studio website of Pranshu Dhiman. It presents the studio's services, real project work, and interactive showcase applications through a responsive full-stack Next.js experience.
 
 ## What the site includes
 
@@ -67,4 +67,4 @@ Deploy the Next.js application to a compatible Node.js host, configure the requi
 
 ## Brand
 
-NextWeb Studio is an independent development studio founded and built by Vinay Kumar, Full Stack Developer.
+NextWeb Studio is an independent development studio founded and built by Pranshu Dhiman, Full Stack Developer.

@@ -26,8 +26,8 @@ export function ProjectCard({ project }: { project: Project }) {
           className="object-cover transition-transform duration-700 group-hover:scale-[1.035]"
           sizes="(max-width: 768px) 100vw, 50vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
-        <span className="absolute top-4 left-4 rounded-full border border-white/15 bg-black/60 px-3 py-1.5 text-[10px] font-bold tracking-[0.14em] uppercase backdrop-blur">
+        <div className="absolute inset-0 bg-gradient-to-t from-[#020b18]/55 via-transparent to-transparent" />
+        <span className="absolute top-4 left-4 rounded-full border border-[var(--border-hover)] bg-[#020b18]/78 px-3 py-1.5 text-[10px] font-bold tracking-[0.14em] text-white uppercase backdrop-blur">
           {project.primaryCategory}
         </span>
       </Link>
@@ -53,7 +53,7 @@ export function ProjectCard({ project }: { project: Project }) {
             {project.technologies.map((technology) => (
               <span
                 key={technology}
-                className="rounded-full bg-white/[0.045] px-3 py-1.5 text-[10px] font-semibold text-white/60"
+                className="rounded-full border border-[var(--border)] bg-[var(--surface-elevated)]/55 px-3 py-1.5 text-[10px] font-semibold text-[var(--foreground-secondary)]"
               >
                 {technology}
               </span>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUp, BriefcaseBusiness, CodeXml, Mail } from "lucide-react";
+import { BrandLogo } from "@/components/brand/brand-logo";
 import { siteConfig } from "@/lib/utils";
 
 export function Footer() {
@@ -8,12 +9,7 @@ export function Footer() {
       <div className="container-shell py-14 sm:py-20">
         <div className="grid gap-10 border-b border-[var(--border)] pb-12 md:grid-cols-[1fr_auto_auto]">
           <div>
-            <Link
-              href="/"
-              className="text-2xl font-extrabold tracking-[-0.05em]"
-            >
-              NextWeb <span className="text-[var(--accent)]">Studio</span>
-            </Link>
+            <BrandLogo />
             <p className="mt-4 max-w-sm text-sm leading-7 text-[var(--muted)]">
               {siteConfig.positioning}
               <span className="mt-2 block text-white/55">
@@ -43,7 +39,7 @@ export function Footer() {
                   <Link
                     href={siteConfig.github}
                     aria-label="GitHub"
-                    className="grid size-11 place-items-center rounded-full border border-[var(--border)] text-[var(--foreground-secondary)] transition hover:border-[var(--border-hover)] hover:text-white"
+                    className="grid size-11 place-items-center rounded-full border border-[var(--border)] bg-[var(--surface)]/55 text-[var(--foreground-secondary)] transition hover:border-[var(--border-hover)] hover:text-[var(--cyan)]"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -54,7 +50,7 @@ export function Footer() {
                   <Link
                     href={siteConfig.linkedin}
                     aria-label="LinkedIn"
-                    className="grid size-11 place-items-center rounded-full border border-[var(--border)] text-[var(--foreground-secondary)] transition hover:border-[var(--border-hover)] hover:text-white"
+                    className="grid size-11 place-items-center rounded-full border border-[var(--border)] bg-[var(--surface)]/55 text-[var(--foreground-secondary)] transition hover:border-[var(--border-hover)] hover:text-[var(--cyan)]"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -65,7 +61,7 @@ export function Footer() {
                   <Link
                     href={`mailto:${siteConfig.email}`}
                     aria-label="Email"
-                    className="grid size-11 place-items-center rounded-full border border-[var(--border)] text-[var(--foreground-secondary)] transition hover:border-[var(--border-hover)] hover:text-white"
+                    className="grid size-11 place-items-center rounded-full border border-[var(--border)] bg-[var(--surface)]/55 text-[var(--foreground-secondary)] transition hover:border-[var(--border-hover)] hover:text-[var(--cyan)]"
                   >
                     <Mail size={18} />
                   </Link>

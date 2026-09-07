@@ -243,7 +243,7 @@ export function ProductSelector() {
                 onClick={() => setActiveId(solution.id)}
                 className={`relative shrink-0 rounded-xl px-4 py-3 text-sm font-semibold transition-colors ${
                   activeId === solution.id
-                    ? "text-white"
+                    ? "text-[var(--cyan)]"
                     : "text-[var(--foreground-muted)] hover:text-[var(--foreground-secondary)]"
                 }`}
               >
@@ -251,7 +251,7 @@ export function ProductSelector() {
                 {activeId === solution.id ? (
                   <motion.span
                     layoutId="active-solution-tab"
-                    className="absolute inset-x-3 bottom-0 h-px bg-[var(--accent)] shadow-[0_0_14px_rgba(200,255,61,0.22)]"
+                    className="absolute inset-x-3 bottom-0 h-px bg-[var(--accent)] shadow-[0_0_14px_rgba(16,217,245,0.22)]"
                     transition={{ duration: reduced ? 0 : 0.3 }}
                   />
                 ) : null}
@@ -280,7 +280,7 @@ export function ProductSelector() {
               <div className="relative grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-14">
                 <div className="flex flex-col">
                   <div className="flex items-center gap-3">
-                    <span className="grid size-10 place-items-center rounded-xl border border-[var(--border)] bg-white/[0.035] text-[var(--accent)]">
+                    <span className="grid size-10 place-items-center rounded-xl border border-[var(--border)] bg-[var(--surface-elevated)]/65 text-[var(--cyan)]">
                       <Icon size={19} />
                     </span>
                     <span className="font-mono text-xs font-bold tracking-[0.14em] text-[var(--accent)] uppercase">
@@ -338,7 +338,7 @@ export function ProductSelector() {
                         <motion.span
                           variants={reduced ? undefined : item}
                           key={technology}
-                          className="rounded-full border border-[var(--border)] bg-white/[0.03] px-3 py-1.5 text-xs text-white/70"
+                          className="rounded-full border border-[var(--border)] bg-[var(--surface-elevated)]/52 px-3 py-1.5 text-xs text-[var(--foreground-secondary)]"
                         >
                           {technology}
                         </motion.span>

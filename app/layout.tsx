@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { siteConfig } from "@/lib/utils";
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "NextWeb Studio — built by Vinay Kumar",
+        alt: "NextWeb Studio — built by Pranshu Dhiman",
       },
     ],
   },
@@ -36,6 +36,11 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: ["/opengraph-image"],
   },
+};
+
+export const viewport: Viewport = {
+  colorScheme: "dark",
+  themeColor: "#020b18",
 };
 
 export default function RootLayout({
@@ -64,7 +69,7 @@ export default function RootLayout({
         />
         <a
           href="#main-content"
-          className="fixed top-3 left-4 z-[100] -translate-y-20 rounded-md bg-[var(--accent)] px-4 py-2 font-bold text-black focus:translate-y-0"
+          className="fixed top-3 left-4 z-[100] -translate-y-20 rounded-md bg-[var(--accent)] px-4 py-2 font-bold text-white focus:translate-y-0"
         >
           Skip to content
         </a>

@@ -65,7 +65,7 @@ export function ProjectFilter({
           ))}
         </div>
         {searchable ? (
-          <label className="flex min-w-64 items-center gap-3 rounded-full border border-[var(--border)] bg-white/[0.025] px-4 transition-colors focus-within:border-[var(--border-hover)]">
+          <label className="flex min-w-64 items-center gap-3 rounded-full border border-[var(--border)] bg-[var(--surface)]/72 px-4 transition-colors focus-within:border-[var(--border-hover)] focus-within:shadow-[0_0_24px_rgba(0,126,255,0.07)]">
             <Search size={15} className="text-white/35" />
             <span className="sr-only">Search projects</span>
             <input
