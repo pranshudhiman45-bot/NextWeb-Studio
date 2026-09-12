@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { phoneSchema } from "@/lib/phone";
 
 export const projectTypes = [
   "Website",
@@ -8,6 +9,8 @@ export const projectTypes = [
   "API / Backend",
   "AI Application",
   "E-commerce",
+  "Performance Optimization",
+  "Maintenance & Support",
   "Other",
 ] as const;
 
@@ -23,7 +26,10 @@ const projectTypeByQuery: Record<string, ProjectType> = {
 };
 
 export function getProjectTypeFromQuery(value?: string) {
-  return value ? projectTypeByQuery[value] : undefined;
+  return value &&
+    Object.prototype.hasOwnProperty.call(projectTypeByQuery, value)
+    ? projectTypeByQuery[value]
+    : undefined;
 }
 
 export const budgets = [
@@ -36,7 +42,8 @@ export const budgets = [
 
 export const contactSchema = z.object({
   name: z.string().trim().min(2, "Please enter your full name").max(80),
-  email: z.string().trim().email("Please enter a valid email address"),
+  email: z.string().trim().email("Please enter a valid email address").max(254),
+  phone: phoneSchema,
   company: z.string().trim().max(120).optional().or(z.literal("")),
   projectType: z.enum(projectTypes, { error: "Choose a project type" }),
   budget: z.enum(budgets, { error: "Choose an estimated budget" }),
@@ -47,6 +54,7 @@ export const contactSchema = z.object({
     .min(20, "Please share at least 20 characters about your project")
     .max(3000),
   source: z.string().trim().max(80).optional(),
+  website: z.string().max(200).optional(),
 });
 
 export type ContactFormValues = z.infer<typeof contactSchema>;

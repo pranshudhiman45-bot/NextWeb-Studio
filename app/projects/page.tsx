@@ -1,16 +1,15 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import { PageTransition } from "@/components/animations/page-transition";
 import { Reveal } from "@/components/animations/reveal";
-import { ContactCta } from "@/components/contact/contact-cta";
 import { ProjectFilter } from "@/components/projects/project-filter";
 import { PageHero } from "@/components/ui/page-hero";
 import { projects } from "@/lib/projects";
 
-export const metadata: Metadata = {
-  title: "Projects",
-  description:
-    "Explore real projects and working applications built by Pranshu Dhiman and presented through NextWeb Studio.",
-};
+export const metadata = pageMetadata(
+  "Projects",
+  "Explore Ryora and Buy Best: project interfaces, implementation details, source links and live previews from NextWeb Studio.",
+  "/projects",
+);
 
 export default function ProjectsPage() {
   return (
@@ -18,7 +17,7 @@ export default function ProjectsPage() {
       <PageHero
         eyebrow="Projects and products"
         title="Selected work, built for real use."
-        description="Real projects and working applications built by Pranshu Dhiman and presented through NextWeb Studio, with factual case studies and live links."
+        description="Browse the creative-workspace demo and the grocery storefront. Each case study separates source implementation from what has been checked live."
       />
       <section className="section-pad">
         <div className="container-shell">
@@ -27,7 +26,6 @@ export default function ProjectsPage() {
           </Reveal>
         </div>
       </section>
-      <ContactCta />
     </PageTransition>
   );
 }

@@ -1,13 +1,18 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { useReducedMotionPreference } from "@/components/animations/use-reduced-motion-preference";
+
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import { Code2 } from "lucide-react";
 import { Reveal } from "@/components/animations/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { technologies } from "@/lib/content";
 
 export function TechnologyGrid() {
-  const reduced = useReducedMotion();
+  const reduced = useReducedMotionPreference();
+  const flowRef = useRef<HTMLOListElement>(null);
+  const flowVisible = useInView(flowRef, { once: true, amount: 0.7 });
 
   return (
     <section className="section-pad border-y border-[var(--border)] bg-[var(--surface)]/45">
@@ -15,11 +20,52 @@ export function TechnologyGrid() {
         <Reveal>
           <SectionHeading
             eyebrow="Technology"
-            title="A pragmatic stack for ambitious products."
-            description="The studio chooses proven tools around your users, goals, and operating constraints—not trends for their own sake."
+            title="Tools used in the work."
+            description="The core tools behind this site and the project implementations. The final stack depends on your application and hosting needs."
           />
         </Reveal>
-        <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--border)] sm:grid-cols-2 lg:grid-cols-4">
+        <ol
+          ref={flowRef}
+          aria-label="Technology connection flow"
+          className="mt-10 grid grid-cols-4"
+        >
+          {["Frontend", "Backend", "Database", "Deployment"].map(
+            (label, index) => (
+              <li key={label} className="relative text-center">
+                {index < 3 ? (
+                  <span
+                    aria-hidden="true"
+                    className="absolute top-1 left-1/2 h-px w-full bg-[var(--border)]"
+                  >
+                    <motion.span
+                      className="block h-full origin-left bg-[#2e90ff]/70"
+                      initial={false}
+                      animate={{ scaleX: reduced || flowVisible ? 1 : 0 }}
+                      transition={{
+                        duration: reduced ? 0 : 0.7,
+                        delay: reduced ? 0 : index * 0.65 + 0.2,
+                      }}
+                    />
+                  </span>
+                ) : null}
+                <motion.span
+                  aria-hidden="true"
+                  className="relative z-10 mx-auto block size-2 rounded-full border border-[var(--cyan)] bg-[var(--surface-strong)]"
+                  initial={false}
+                  animate={{ opacity: reduced || flowVisible ? 1 : 0.35 }}
+                  transition={{
+                    duration: reduced ? 0 : 0.5,
+                    delay: reduced ? 0 : index * 0.65,
+                  }}
+                />
+                <span className="mt-3 block text-[10px] font-medium tracking-wide text-[var(--foreground-secondary)] sm:text-xs">
+                  {label}
+                </span>
+              </li>
+            ),
+          )}
+        </ol>
+        <div className="mt-8 grid gap-px overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--border)] sm:grid-cols-2 lg:grid-cols-4">
           {Object.entries(technologies).map(([category, items], index) => (
             <Reveal key={category} delay={index * 0.06} className="h-full">
               <motion.div
@@ -49,7 +95,7 @@ export function TechnologyGrid() {
                   {items.map((item) => (
                     <li
                       key={item}
-                      className="group/item flex items-center gap-2 transition-colors duration-200 hover:text-white"
+                      className="group/item flex items-center gap-2 transition-colors duration-200 hover:text-[var(--foreground)]"
                     >
                       <span className="h-px w-0 bg-[var(--accent)] transition-all duration-200 group-hover/item:w-2" />
                       {item}
