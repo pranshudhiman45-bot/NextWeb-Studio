@@ -28,7 +28,7 @@ export function ProjectFilter({
           (category === "All" || project.categories.includes(category)) &&
           `${project.title} ${project.projectType} ${project.shortDescription} ${project.categories.join(" ")} ${project.technologies.join(" ")}`
             .toLowerCase()
-            .includes(query.toLowerCase()),
+            .includes(query.trim().toLowerCase()),
       ),
     [category, projects, query],
   );
@@ -42,22 +42,21 @@ export function ProjectFilter({
       <div className="mb-9 flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
         <div
           className="flex max-w-full gap-2 overflow-x-auto pb-2"
-          role="tablist"
+          role="group"
           aria-label="Project categories"
         >
           {filters.map((item) => (
             <button
               key={item}
               type="button"
-              role="tab"
-              aria-selected={category === item}
+              aria-pressed={category === item}
               onClick={() => setCategory(item)}
-              className={`relative shrink-0 rounded-full border px-4 py-2 text-xs font-bold transition ${category === item ? "border-[var(--accent)] text-[var(--accent-ink)]" : "border-[var(--border)] text-white/55 hover:border-[var(--border-hover)] hover:text-white"}`}
+              className={`relative isolate shrink-0 rounded-full border px-4 py-2 text-xs font-bold transition ${category === item ? "border-[var(--accent)] bg-[var(--button-primary)] text-[var(--accent-ink)]" : "border-[var(--border)] text-[var(--foreground-muted)] hover:border-[var(--border-hover)] hover:text-[var(--foreground)]"}`}
             >
               {category === item ? (
                 <motion.span
                   layoutId="active-project-filter"
-                  className="absolute inset-0 -z-10 rounded-full bg-[var(--accent)]"
+                  className="absolute inset-0 -z-10 rounded-full bg-[var(--button-primary)]"
                 />
               ) : null}
               {item}
@@ -66,14 +65,14 @@ export function ProjectFilter({
         </div>
         {searchable ? (
           <label className="flex min-w-64 items-center gap-3 rounded-full border border-[var(--border)] bg-[var(--surface)]/72 px-4 transition-colors focus-within:border-[var(--border-hover)] focus-within:shadow-[0_0_24px_rgba(0,126,255,0.07)]">
-            <Search size={15} className="text-white/35" />
+            <Search size={15} className="text-[var(--foreground-muted)]" />
             <span className="sr-only">Search projects</span>
             <input
               type="search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Search projects"
-              className="h-11 w-full bg-transparent text-sm placeholder:text-white/30 focus:outline-none"
+              className="h-11 w-full bg-transparent text-sm placeholder:text-[var(--foreground-muted)] focus:outline-none"
             />
           </label>
         ) : null}

@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build --webpack",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && next build --webpack",
+    "start": "node init && next start",
     "lint": "eslint .",
+    "test:contact": "node --import ./tests/register-typescript.mjs --test tests/contact.test.mjs",
+    "debug:contact-email": "node --import ./tests/register-typescript.mjs scripts/check-contact-email.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },

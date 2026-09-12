@@ -5,39 +5,46 @@ export const projects: Project[] = [
     title: "Ryora",
     slug: "ryora",
     shortDescription:
-      "A cinematic prompt-to-video studio for directing, generating, and organizing animated scenes.",
+      "A cinematic creative-workspace demo with scene prompts, style selection, and a video-library interface.",
     fullDescription:
-      "Ryora turns a written scene into an animated video through a focused creative workflow. Its dark, cinematic interface guides users from an idea and visual style to generation, playback, downloads, favorites, and a reusable video library.",
+      "Ryora explores how a prompt-led creative workspace can feel: a scene brief, a visual style, and a library for reviewing work. The public site presents the interface; the reviewed backend uses sample video media rather than generating original video.",
     projectType: "Personal Project",
     primaryCategory: "Frontend",
-    categories: ["Frontend"],
-    technologies: [],
+    categories: ["Frontend", "Full Stack", "Backend"],
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+    ],
     technologyNote:
-      "Technology details are intentionally omitted because the Ryora source is not available in this repository.",
-    thumbnail: "/images/project-ryora.png",
-    images: ["/images/project-ryora.png"],
+      "Stack confirmed in the local project source. The reviewed video provider returns demo media. Production prompt enhancement and authenticated workflows still need live verification.",
+    thumbnail: "/images/project-ryora-preview.png",
+    images: ["/images/project-ryora-preview.png"],
     liveUrl: "https://ryora.vercel.app/",
     featured: true,
     problem:
-      "Ryora is designed for people who want to turn an idea into an animated scene without working through a traditional editing timeline, keyframes, or a complex production interface.",
+      "A prompt-led creative tool needs to make scene input, visual style, progress, and previous work easy to navigate without overwhelming the user.",
     solution:
-      "The live product centers the experience on a written scene, directed prompt enhancement, and a choice of eleven visual styles. Clear generation stages lead into video preview, download, favorite, and history workflows.",
+      "The interface brings scene prompts, visual-style options, and a video-library layout into one creative workspace. The public landing page includes a studio preview and links to account creation.",
     architecture:
-      "The public experience is organized into a cinematic landing page, sign-in and registration, and a protected creative workspace with Dashboard, Videos, Favorites, History, Profile, and Settings areas.",
-    architectureHeading: "Product structure",
+      "The source pairs a React and TypeScript frontend with an Express API and MongoDB models for accounts, generations, and video records. A provider interface separates the generation workflow from its video source.",
+    architectureHeading: "Source architecture",
     implementation:
-      "The visible studio keeps creation focused: users describe a scene, select a visual style, start generation, and follow progress through stages such as prompt reading, scene direction, lighting, palette, and frame rendering. Recent work then appears in a responsive video library.",
-    implementationHeading: "Verified workflow",
-    resultsEyebrow: "Verified experience",
-    resultsTitle: "What the live product demonstrates.",
+      "The backend includes optional Gemini prompt enhancement with a local text fallback, account sessions, a generation allowance, and video-library routes. The currently selected video provider returns a sample MP4; this case study does not claim original AI video generation.",
+    implementationHeading: "Implementation and demo scope",
+    resultsEyebrow: "Project scope",
+    resultsTitle: "What this project demonstrates.",
     results: [
-      "Directed prompts that resolve scene framing, camera motion, mood, and palette",
-      "Eleven selectable animation styles ranging from Ghibli and clay to comic and realistic 3D",
-      "Library workflows for replay, favorites, downloads, and complete generation history",
+      "A responsive landing page and cinematic creative-workspace interface",
+      "Account, generation-record, and video-library architecture in the source",
+      "A demo-media workflow with a replaceable video provider",
     ],
   },
   {
-    title: "E-commerce Website",
+    title: "Buy Best Grocery E-commerce",
     slug: "e-commerce",
     shortDescription:
       "A full-stack grocery storefront with product discovery, account and cart flows, coupon-aware checkout, Stripe payments, admin operations, and real-time support.",
@@ -45,7 +52,7 @@ export const projects: Project[] = [
       "Buy Best is a deployed grocery commerce application that brings catalog browsing, authenticated customer journeys, delivery addresses, promotions, payments, store administration, and live support into one responsive product experience.",
     projectType: "Showcase Application",
     primaryCategory: "Full Stack",
-    categories: ["Full Stack", "Frontend", "Backend", "Showcase"],
+    categories: ["Full Stack", "Frontend", "Backend", "E-commerce", "Showcase"],
     technologies: [
       "React",
       "TypeScript",
@@ -58,23 +65,24 @@ export const projects: Project[] = [
     ],
     thumbnail: "/images/project-e-commerce.png",
     images: ["/images/project-e-commerce.png"],
-    githubUrl: "https://github.com/pranshudhiman45-bot/E-Commerce-Web-App",
+    githubUrl:
+      "https://github.com/pranshudhiman45-bot/BuyBest-Grocery-MERN-E-Commerce-App",
     liveUrl: "https://buy-best-grocery-mern-e-commerce-ap.vercel.app/",
     internalUrl: "/showcase/ecommerce",
     featured: true,
     problem:
       "A grocery storefront needs to coordinate discovery, availability, account state, delivery details, promotions, payment, fulfillment records, and customer support without fragmenting the buying journey.",
     solution:
-      "Buy Best connects those workflows in a single application: customers can browse and search the live catalog, maintain a guest or authenticated cart, choose an address, apply eligible coupons, and complete an order with cash on delivery or Stripe Checkout.",
+      "Buy Best connects those workflows in a single application: customers can browse and search the live catalog, maintain a guest or authenticated cart, choose an address, apply eligible coupons, and use the implemented cash-on-delivery or Stripe Checkout flow. Live payment completion depends on the deployed account and gateway configuration.",
     architecture:
       "A React 19 and TypeScript client built with Vite communicates through credentialed Axios clients with an Express 5 API. The server persists commerce and account data through Mongoose, issues access and refresh tokens, handles Stripe events, uploads media to Cloudinary, and hosts Socket.IO support channels.",
     implementation:
-      "The frontend uses a Redux Toolkit app shell, lazy-loaded views, reusable store and auth clients, and responsive Tailwind CSS layouts. The backend separates routes, controllers, services, middleware, and Mongoose models, with centralized environment configuration, validation, CORS, Helmet, rate limiting, error handling, and request idempotency.",
+      "The frontend uses lazy-loaded views, reusable store and auth clients, and responsive Tailwind CSS layouts. The backend separates routes, controllers, services, middleware, and Mongoose models, with centralized environment configuration, validation, CORS, Helmet, rate limiting, error handling, and request idempotency.",
     details: [
       {
         title: "Frontend architecture",
         description:
-          "The storefront is a React 19 and TypeScript single-page application built with Vite and Tailwind CSS 4. Redux Toolkit manages the application view state, while context-backed store logic coordinates products, carts, settings, and authenticated transitions.",
+          "The storefront is a React 19 and TypeScript single-page application built with Vite and Tailwind CSS 4. Context-backed store logic coordinates products, carts, settings, and authenticated transitions.",
         items: [
           "Lazy-loaded shop, product, cart, checkout, offers, account, admin, and support views",
           "Credentialed Axios clients with access-token attachment and refresh-session retries",
@@ -86,7 +94,7 @@ export const projects: Project[] = [
         description:
           "The Node.js backend runs Express 5 on a shared HTTP server with Socket.IO. REST resources are organized by route, controller, service, middleware, and model responsibilities.",
         items: [
-          "Implemented API groups: auth, products, cart, addresses, catagories, coupons, offers, settings, payment, and support",
+          "Implemented API groups: auth, products, cart, addresses, categories, coupons, offers, settings, payment, and support",
           "Helmet, credential-aware CORS, cookie parsing, centralized errors, and request idempotency middleware",
           "Role-aware user, admin, and support endpoints",
         ],
@@ -116,7 +124,7 @@ export const projects: Project[] = [
         description:
           "The commerce flow covers public product browsing and search, product details, guest and authenticated carts, quantity limits, address management, coupon validation, tax and delivery calculations, and order history.",
         items: [
-          "Cash on delivery and Stripe Checkout flows for card or UPI selection",
+          "Cash on delivery and Stripe Checkout integration; payment-method availability depends on gateway configuration",
           "Stripe webhook handling for successful, failed, asynchronous, and expired checkout sessions",
           "Stock validation and decrement, order finalization, cart cleanup, and idempotent checkout requests",
         ],
@@ -138,8 +146,8 @@ export const projects: Project[] = [
       "Idempotency records and Stripe event handling coordinate payment state, stock updates, order finalization, and cart cleanup",
       "Guest-cart normalization and authenticated synchronization preserve product limits, promotions, and address selection",
     ],
-    resultsEyebrow: "Verified implementation",
-    resultsTitle: "What the application currently supports.",
+    resultsEyebrow: "Source implementation",
+    resultsTitle: "Implemented commerce workflows.",
     results: [
       "Responsive product discovery, cart, address, promotion, and checkout workflows",
       "Protected customer, admin, and support experiences backed by role-aware APIs",

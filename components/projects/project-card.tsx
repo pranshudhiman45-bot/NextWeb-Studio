@@ -1,34 +1,40 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, GitFork } from "lucide-react";
 import type { Project } from "@/types";
+import styles from "@/components/animations/studio-motion.module.css";
 
 export function ProjectCard({ project }: { project: Project }) {
-  const reduced = useReducedMotion();
+  const previewUrl =
+    project.internalUrl ?? project.liveUrl ?? `/projects/${project.slug}`;
+  const externalPreview = !project.internalUrl && Boolean(project.liveUrl);
 
   return (
-    <motion.article
-      className="group glass-card glass-card-hover overflow-hidden rounded-2xl"
-      whileHover={reduced ? undefined : { y: -3 }}
-      transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+    <article
+      className={`group glass-card glass-card-hover overflow-hidden rounded-2xl ${styles.projectCard}`}
     >
       <Link
-        href={`/projects/${project.slug}`}
-        className="relative block aspect-[16/10] overflow-hidden border-b border-[var(--border)] bg-[var(--surface-elevated)]"
+        href={previewUrl}
+        target={externalPreview ? "_blank" : undefined}
+        rel={externalPreview ? "noopener noreferrer" : undefined}
+        aria-label={`View ${project.title}${externalPreview ? " (opens in a new tab)" : ""}`}
+        className={`relative block aspect-[16/10] overflow-hidden border-b border-[var(--border)] bg-[var(--surface-elevated)] ${styles.projectPreview}`}
       >
         <Image
           src={project.thumbnail}
           alt={`${project.title} interface preview`}
           fill
-          className="object-cover transition-transform duration-700 group-hover:scale-[1.035]"
+          className={`object-cover ${styles.previewImage}`}
           sizes="(max-width: 768px) 100vw, 50vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#020b18]/55 via-transparent to-transparent" />
         <span className="absolute top-4 left-4 rounded-full border border-[var(--border-hover)] bg-[#020b18]/78 px-3 py-1.5 text-[10px] font-bold tracking-[0.14em] text-white uppercase backdrop-blur">
           {project.primaryCategory}
+        </span>
+        <span className={styles.previewAction}>
+          View Project <ArrowUpRight size={15} aria-hidden="true" />
         </span>
       </Link>
       <div className="p-6 sm:p-7">
@@ -60,7 +66,7 @@ export function ProjectCard({ project }: { project: Project }) {
             ))}
           </div>
         ) : null}
-        <div className="mt-6 flex flex-wrap gap-x-5 gap-y-3 border-t border-[var(--border)] pt-5 text-xs font-bold tracking-[0.1em] text-white/55 uppercase">
+        <div className="mt-6 flex flex-wrap gap-x-5 gap-y-3 border-t border-[var(--border)] pt-5 text-xs font-bold tracking-[0.1em] text-[var(--foreground-muted)] uppercase">
           {project.liveUrl ? (
             <Link
               href={project.liveUrl}
@@ -97,6 +103,6 @@ export function ProjectCard({ project }: { project: Project }) {
           </Link>
         </div>
       </div>
-    </motion.article>
+    </article>
   );
 }

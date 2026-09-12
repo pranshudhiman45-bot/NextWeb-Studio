@@ -1,0 +1,776 @@
+{
+  "commit": "1da37ad239dc88dcbd6f118d68ff2a922e058a48",
+  "scope": "Local production build, not hosted staging",
+  "caveats": [
+    "Initial homepage brokenImages entries were unloaded lazy images; follow-up confirms both load after scrolling.",
+    "Initial test named Contact API malformed sent a JSON string rather than malformed JSON bytes. Raw malformed JSON in follow-up is the authoritative parsing test.",
+    "Generic 404 browser network-idle timed out; a separate curl request returned 404.",
+    "External iframe blocking was simulated in follow-up; this is not proof that the live dependency is unavailable."
+  ],
+  "main": {
+    "timestamp": "2026-09-07T16:27:14.327Z",
+    "routes": [
+      {
+        "path": "/",
+        "status": 200,
+        "title": "NextWeb Studio \u2014 Websites, Full Stack & AI Development",
+        "canonical": "http://localhost:3000/",
+        "ogUrl": "http://localhost:3000",
+        "h1": [
+          "We build digital products that grow your business."
+        ],
+        "mainCount": 1,
+        "brokenImages": [
+          "http://127.0.0.1:3100/_next/image?url=%2Fimages%2Fproject-ryora.png&w=3840&q=75",
+          "http://127.0.0.1:3100/_next/image?url=%2Fimages%2Fproject-e-commerce.png&w=3840&q=75"
+        ],
+        "overflow": false,
+        "duplicateIds": [
+          "nextweb-ring",
+          "nextweb-blue"
+        ]
+      },
+      {
+        "path": "/about",
+        "status": 200,
+        "title": "About \u2014 NextWeb Studio",
+        "canonical": "http://localhost:3000/",
+        "ogUrl": "http://localhost:3000",
+        "h1": [
+          "Independent studio. Full-product perspective."
+        ],
+        "mainCount": 1,
+        "brokenImages": [],
+        "overflow": false,
+        "duplicateIds": [
+          "nextweb-ring",
+          "nextweb-blue"
+        ]
+      },
+      {
+        "path": "/services",
+        "status": 200,
+        "title": "Services \u2014 NextWeb Studio",
+        "canonical": "http://localhost:3000/",
+        "ogUrl": "http://localhost:3000",
+        "h1": [
+          "What NextWeb Studio builds."
+        ],
+        "mainCount": 1,
+        "brokenImages": [],
+        "overflow": false,
+        "duplicateIds": [
+          "nextweb-ring",
+          "nextweb-blue"
+        ]
+      },
+      {
+        "path": "/projects",
+        "status": 200,
+        "title": "Projects \u2014 NextWeb Studio",
+        "canonical": "http://localhost:3000/",
+        "ogUrl": "http://localhost:3000",
+        "h1": [
+          "Selected work, built for real use."
+        ],
+        "mainCount": 1,
+        "brokenImages": [],
+        "overflow": false,
+        "duplicateIds": [
+          "nextweb-ring",
+          "nextweb-blue"
+        ]
+      },
+      {
+        "path": "/projects/ryora",
+        "status": 200,
+        "title": "Ryora \u2014 NextWeb Studio",
+        "canonical": "http://localhost:3000/",
+        "ogUrl": "http://localhost:3000",
+        "h1": [
+          "Ryora"
+        ],
+        "mainCount": 1,
+        "brokenImages": [],
+        "overflow": false,
+        "duplicateIds": [
+          "nextweb-ring",
+          "nextweb-blue"
+        ]
+      },
+      {
+        "path": "/projects/e-commerce",
+        "status": 200,
+        "title": "E-commerce Website \u2014 NextWeb Studio",
+        "canonical": "http://localhost:3000/",
+        "ogUrl": "http://localhost:3000",
+        "h1": [
+          "E-commerce Website"
+        ],
+        "mainCount": 1,
+        "brokenImages": [],
+        "overflow": false,
+        "duplicateIds": [
+          "nextweb-ring",
+          "nextweb-blue"
+        ]
+      },
+      {
+        "path": "/contact",
+        "status": 200,
+        "title": "Contact \u2014 NextWeb Studio",
+        "canonical": "http://localhost:3000/",
+        "ogUrl": "http://localhost:3000",
+        "h1": [
+          "Let\u2019s build your next product."
+        ],
+        "mainCount": 1,
+        "brokenImages": [],
+        "overflow": false,
+        "duplicateIds": [
+          "nextweb-ring",
+          "nextweb-blue"
+        ]
+      },
+      {
+        "path": "/admin",
+        "status": 200,
+        "title": "Studio Dashboard \u2014 NextWeb Studio",
+        "canonical": "http://localhost:3000/",
+        "ogUrl": "http://localhost:3000",
+        "h1": [
+          "Overview"
+        ],
+        "mainCount": 1,
+        "brokenImages": [],
+        "overflow": false,
+        "duplicateIds": [
+          "nextweb-ring",
+          "nextweb-blue"
+        ]
+      },
+      {
+        "path": "/showcase/ecommerce",
+        "status": 200,
+        "title": "Buy Best E-commerce Showcase \u2014 NextWeb Studio",
+        "canonical": "http://localhost:3000/",
+        "ogUrl": "http://localhost:3000",
+        "h1": [],
+        "mainCount": 2,
+        "brokenImages": [],
+        "overflow": false,
+        "duplicateIds": [
+          "nextweb-ring",
+          "nextweb-blue"
+        ]
+      },
+      {
+        "path": "/audit-missing-page",
+        "title": "NextWeb Studio \u2014 Websites, Full Stack & AI Development",
+        "canonical": "http://localhost:3000/",
+        "ogUrl": "http://localhost:3000",
+        "h1": [
+          "That page slipped away."
+        ],
+        "mainCount": 1,
+        "brokenImages": [],
+        "overflow": false,
+        "duplicateIds": [
+          "nextweb-ring",
+          "nextweb-blue"
+        ]
+      },
+      {
+        "path": "/projects/audit-missing-project",
+        "status": 404,
+        "title": "NextWeb Studio \u2014 Websites, Full Stack & AI Development",
+        "canonical": "http://localhost:3000/",
+        "ogUrl": "http://localhost:3000",
+        "h1": [
+          "That page slipped away."
+        ],
+        "mainCount": 1,
+        "brokenImages": [],
+        "overflow": false,
+        "duplicateIds": [
+          "nextweb-ring",
+          "nextweb-blue"
+        ]
+      }
+    ],
+    "checks": [
+      {
+        "name": "Projects API",
+        "value": {
+          "status": 200,
+          "count": 2
+        }
+      },
+      {
+        "name": "/robots.txt",
+        "value": {
+          "status": 200,
+          "type": "text/plain",
+          "text": "User-Agent: *\nAllow: /\nDisallow: /admin\n\nSitemap: http://localhost:3000/sitemap.xml\n"
+        }
+      },
+      {
+        "name": "/sitemap.xml",
+        "value": {
+          "status": 200,
+          "type": "application/xml",
+          "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n<url>\n<loc>http://localhost:3000</loc>\n<lastmod>2026-09-07T16:16:18.151Z</lastmod>\n<changefreq>monthly</changefreq>\n<priority>1</priority>\n</url>\n<url>\n<loc>http://localhost:3000/about</loc>\n<lastmod>2026-09-07T16:16:18.151Z</lastmod>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>http://localhost:3000/services</loc>\n<lastmod>2026-09-07T16:16:18.151Z</lastmod>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>http://localhost:3000/projects</loc>\n<lastmod>2026-09-07T16:16:18.151Z</lastmod>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>http://localhost:3000/showcase/ecommerce</loc>\n<lastmod>2026-09-07T16:16:18.151Z</lastmod>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>http://localhost:3000/contact</loc>\n<lastmod>2026-09-07T16:16:18.151Z</lastmod>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>http://localhost:3000/projects/ryora</loc>\n<lastmod>2026-09-07T16:16:18.151Z</lastmod>\n<changefreq>monthly</changefreq>\n<priority>0.7</priority>\n</url>\n<url>\n<loc>http://localhost:3000/projects/e-commerce</loc>\n<lastmod>2026-09-07T16:16:18.151Z</lastmod>\n<changefreq>monthly</changefreq>\n<priority>0.7</priority>\n</url>\n</urlset>\n"
+        }
+      },
+      {
+        "name": "/icon.svg",
+        "value": {
+          "status": 200,
+          "type": "image/svg+xml"
+        }
+      },
+      {
+        "name": "/opengraph-image",
+        "value": {
+          "status": 200,
+          "type": "image/png"
+        }
+      },
+      {
+        "name": "/twitter-image",
+        "value": {
+          "status": 200,
+          "type": "image/png"
+        }
+      },
+      {
+        "name": "Contact API empty",
+        "value": {
+          "status": 400,
+          "body": "{\"success\":false,\"message\":\"Please check the highlighted fields.\",\"errors\":{\"name\":[\"Invalid input: expected string, received undefined\"],\"email\":[\"Invalid input: expected string, received undefined\"],\"projectType\":[\"Choose a project type\"],\"budget\":[\"Choose an estimated budget\"],\"timeline\":[\"Invalid input: expected string, received undefined\"],\"message\":[\"Invalid input: expected string, received undefined\"]}}"
+        }
+      },
+      {
+        "name": "Contact API malformed",
+        "value": {
+          "status": 400,
+          "body": "{\"success\":false,\"message\":\"Please check the highlighted fields.\",\"errors\":{}}"
+        }
+      },
+      {
+        "name": "Contact API valid",
+        "value": {
+          "status": 500,
+          "body": "{\"success\":false,\"message\":\"Something went wrong. Please try again shortly.\"}"
+        }
+      },
+      {
+        "name": "Filter Full Stack",
+        "value": [
+          "E-commerce Website"
+        ]
+      },
+      {
+        "name": "Filter Frontend",
+        "value": [
+          "Ryora",
+          "E-commerce Website"
+        ]
+      },
+      {
+        "name": "Filter Backend",
+        "value": [
+          "E-commerce Website"
+        ]
+      },
+      {
+        "name": "Filter Showcase",
+        "value": [
+          "E-commerce Website"
+        ]
+      },
+      {
+        "name": "Filter All",
+        "value": [
+          "Ryora",
+          "E-commerce Website"
+        ]
+      },
+      {
+        "name": "Search \"Ryora\"",
+        "value": {
+          "titles": [
+            "Ryora"
+          ],
+          "empty": false
+        }
+      },
+      {
+        "name": "Search \"ryora\"",
+        "value": {
+          "titles": [
+            "Ryora"
+          ],
+          "empty": false
+        }
+      },
+      {
+        "name": "Search \" Ryora \"",
+        "value": {
+          "titles": [],
+          "empty": true
+        }
+      },
+      {
+        "name": "Search \"MongoDB\"",
+        "value": {
+          "titles": [
+            "E-commerce Website"
+          ],
+          "empty": false
+        }
+      },
+      {
+        "name": "Search \"no-such-project\"",
+        "value": {
+          "titles": [],
+          "empty": true
+        }
+      },
+      {
+        "name": "Filter ArrowRight",
+        "value": {
+          "focused": "All",
+          "selected": "All"
+        }
+      },
+      {
+        "name": "Solution Business Website",
+        "value": {
+          "href": "/contact?project=business-website&source=solution-selector",
+          "panel": "solution-panel-business-website",
+          "selectedProject": [
+            "<option value=\"Website\" selected=\"\""
+          ],
+          "sourceIncluded": true
+        }
+      },
+      {
+        "name": "Solution SaaS Product",
+        "value": {
+          "href": "/contact?project=saas-product&source=solution-selector",
+          "panel": "solution-panel-saas-product",
+          "selectedProject": [
+            "<option value=\"SaaS\" selected=\"\""
+          ],
+          "sourceIncluded": true
+        }
+      },
+      {
+        "name": "Solution Dashboard",
+        "value": {
+          "href": "/contact?project=dashboard&source=solution-selector",
+          "panel": "solution-panel-dashboard",
+          "selectedProject": [
+            "<option value=\"Dashboard\" selected=\"\""
+          ],
+          "sourceIncluded": true
+        }
+      },
+      {
+        "name": "Solution E-commerce",
+        "value": {
+          "href": "/contact?project=e-commerce&source=solution-selector",
+          "panel": "solution-panel-e-commerce",
+          "selectedProject": [
+            "<option value=\"E-commerce\" selected=\"\""
+          ],
+          "sourceIncluded": true
+        }
+      },
+      {
+        "name": "Solution AI Application",
+        "value": {
+          "href": "/contact?project=ai-application&source=solution-selector",
+          "panel": "solution-panel-ai-application",
+          "selectedProject": [
+            "<option value=\"AI Application\" selected=\"\""
+          ],
+          "sourceIncluded": true
+        }
+      },
+      {
+        "name": "Solution API / Backend",
+        "value": {
+          "href": "/contact?project=api-backend&source=solution-selector",
+          "panel": "solution-panel-api-backend",
+          "selectedProject": [
+            "<option value=\"API / Backend\" selected=\"\""
+          ],
+          "sourceIncluded": true
+        }
+      },
+      {
+        "name": "Solution ArrowRight",
+        "value": {
+          "focused": "Business Website",
+          "selected": "API / Backend"
+        }
+      },
+      {
+        "name": "Contact prefill",
+        "value": {
+          "type": "SaaS",
+          "source": "solution-selector",
+          "emailLinks": 0,
+          "bookLinks": 0
+        }
+      },
+      {
+        "name": "Empty contact validation",
+        "value": {
+          "errors": [
+            "Please enter your full name",
+            "Please enter a valid email address",
+            "Choose an estimated budget",
+            "Tell me your ideal timeline",
+            "Please share at least 20 characters about your project"
+          ],
+          "inputA11y": {
+            "invalid": null,
+            "describedBy": null
+          }
+        }
+      },
+      {
+        "name": "Contact submission",
+        "value": {
+          "message": "Something went wrong. Please try again shortly.",
+          "retainedName": "Audit Test",
+          "buttonEnabled": true
+        }
+      },
+      {
+        "name": "Admin",
+        "value": {
+          "interactiveNav": 0,
+          "preview": true
+        }
+      },
+      {
+        "name": "Layout 320 /",
+        "value": {
+          "viewport": 320,
+          "width": 320,
+          "overflow": false
+        }
+      },
+      {
+        "name": "Layout 320 /projects",
+        "value": {
+          "viewport": 320,
+          "width": 320,
+          "overflow": false
+        }
+      },
+      {
+        "name": "Layout 320 /contact",
+        "value": {
+          "viewport": 320,
+          "width": 320,
+          "overflow": false
+        }
+      },
+      {
+        "name": "Layout 320 /admin",
+        "value": {
+          "viewport": 320,
+          "width": 320,
+          "overflow": false
+        }
+      },
+      {
+        "name": "Layout 320 /showcase/ecommerce",
+        "value": {
+          "viewport": 320,
+          "width": 320,
+          "overflow": false
+        }
+      },
+      {
+        "name": "Layout 375 /",
+        "value": {
+          "viewport": 375,
+          "width": 375,
+          "overflow": false
+        }
+      },
+      {
+        "name": "Layout 375 /projects",
+        "value": {
+          "viewport": 375,
+          "width": 375,
+          "overflow": false
+        }
+      },
+      {
+        "name": "Layout 375 /contact",
+        "value": {
+          "viewport": 375,
+          "width": 375,
+          "overflow": false
+        }
+      },
+      {
+        "name": "Layout 375 /admin",
+        "value": {
+          "viewport": 375,
+          "width": 375,
+          "overflow": false
+        }
+      },
+      {
+        "name": "Layout 375 /showcase/ecommerce",
+        "value": {
+          "viewport": 375,
+          "width": 375,
+          "overflow": false
+        }
+      },
+      {
+        "name": "Layout 768 /",
+        "value": {
+          "viewport": 768,
+          "width": 768,
+          "overflow": false
+        }
+      },
+      {
+        "name": "Layout 768 /projects",
+        "value": {
+          "viewport": 768,
+          "width": 768,
+          "overflow": false
+        }
+      },
+      {
+        "name": "Layout 768 /contact",
+        "value": {
+          "viewport": 768,
+          "width": 768,
+          "overflow": false
+        }
+      },
+      {
+        "name": "Layout 768 /admin",
+        "value": {
+          "viewport": 768,
+          "width": 768,
+          "overflow": false
+        }
+      },
+      {
+        "name": "Layout 768 /showcase/ecommerce",
+        "value": {
+          "viewport": 768,
+          "width": 768,
+          "overflow": false
+        }
+      },
+      {
+        "name": "Mobile Escape",
+        "value": {
+          "stillOpen": true
+        }
+      },
+      {
+        "name": "Mobile logo navigation",
+        "value": {
+          "url": "http://127.0.0.1:3100/",
+          "menuStillOpen": true
+        }
+      },
+      {
+        "name": "Mobile menu link",
+        "value": {
+          "url": "http://127.0.0.1:3100/about",
+          "closed": true
+        }
+      },
+      {
+        "name": "No JavaScript content",
+        "value": {
+          "opacity": "0",
+          "textPresent": true
+        }
+      }
+    ],
+    "errors": [
+      "/audit-missing-page: page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:3100/audit-missing-page\", waiting until \"networkidle\"\u001b[22m\n"
+    ]
+  },
+  "followup": [
+    {
+      "name": "Homepage images after scrolling",
+      "value": [
+        {
+          "src": "http://127.0.0.1:3100/_next/image?url=%2Fimages%2Fproject-ryora.png&w=750&q=75",
+          "loaded": true,
+          "width": 720
+        },
+        {
+          "src": "http://127.0.0.1:3100/_next/image?url=%2Fimages%2Fproject-e-commerce.png&w=750&q=75",
+          "loaded": true,
+          "width": 720
+        }
+      ]
+    },
+    {
+      "name": "Homepage internal link",
+      "value": {
+        "href": "/",
+        "status": 200
+      }
+    },
+    {
+      "name": "Homepage internal link",
+      "value": {
+        "href": "/services",
+        "status": 200
+      }
+    },
+    {
+      "name": "Homepage internal link",
+      "value": {
+        "href": "/projects",
+        "status": 200
+      }
+    },
+    {
+      "name": "Homepage internal link",
+      "value": {
+        "href": "/about",
+        "status": 200
+      }
+    },
+    {
+      "name": "Homepage internal link",
+      "value": {
+        "href": "/contact",
+        "status": 200
+      }
+    },
+    {
+      "name": "Homepage internal link",
+      "value": {
+        "href": "/contact?source=homepage",
+        "status": 200
+      }
+    },
+    {
+      "name": "Homepage internal link",
+      "value": {
+        "href": "/contact?project=business-website&source=solution-selector",
+        "status": 200
+      }
+    },
+    {
+      "name": "Homepage internal link",
+      "value": {
+        "href": "/projects/ryora",
+        "status": 200
+      }
+    },
+    {
+      "name": "Homepage internal link",
+      "value": {
+        "href": "/projects/e-commerce",
+        "status": 200
+      }
+    },
+    {
+      "name": "Homepage internal link",
+      "value": {
+        "href": "/showcase/ecommerce",
+        "status": 200
+      }
+    },
+    {
+      "name": "Homepage internal link",
+      "value": {
+        "href": "/contact?source=services",
+        "status": 200
+      }
+    },
+    {
+      "name": "Homepage internal link",
+      "value": {
+        "href": "/contact?source=cta",
+        "status": 200
+      }
+    },
+    {
+      "name": "Combined filter and search",
+      "value": [
+        "E-commerce Website"
+      ]
+    },
+    {
+      "name": "Case study click",
+      "value": "http://127.0.0.1:3100/projects/e-commerce"
+    },
+    {
+      "name": "Next case study click",
+      "value": "http://127.0.0.1:3100/projects/ryora"
+    },
+    {
+      "name": "Default empty form errors",
+      "value": [
+        "Please enter your full name",
+        "Please enter a valid email address",
+        "Choose a project type",
+        "Choose an estimated budget",
+        "Tell me your ideal timeline",
+        "Please share at least 20 characters about your project"
+      ]
+    },
+    {
+      "name": "Blocked embedded site fallback",
+      "value": {
+        "iframeCount": 1,
+        "text": "BACK TO NEXTWEB STUDIO\nOpen full live site\n\nBuy Best\n\nInteractive production preview\n\nSHOWCASE APPLICATION"
+      }
+    },
+    {
+      "name": "Contact query constructor",
+      "value": {
+        "status": 500
+      }
+    },
+    {
+      "name": "Contact query toString",
+      "value": {
+        "status": 500
+      }
+    },
+    {
+      "name": "Contact query __proto__",
+      "value": {
+        "status": 500
+      }
+    },
+    {
+      "name": "Contact query unknown",
+      "value": {
+        "status": 200
+      }
+    },
+    {
+      "name": "Raw malformed JSON",
+      "value": {
+        "status": 500,
+        "body": "{\"success\":false,\"message\":\"Something went wrong. Please try again shortly.\"}"
+      }
+    }
+  ]
+}
