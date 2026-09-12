@@ -1,0 +1,69 @@
+.toggle {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-around;
+  width: 84px;
+  height: 44px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.toggle:hover {
+  border-color: var(--border-hover);
+}
+
+.toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.thumb {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 16%);
+  transform: translateX(40px);
+  transition: transform 220ms ease;
+}
+
+.sun,
+.moon {
+  position: relative;
+  pointer-events: none;
+}
+
+.sun {
+  color: var(--foreground-muted);
+}
+
+.moon {
+  color: var(--accent-ink);
+}
+
+:global(html[data-theme="light"]) .thumb {
+  transform: translateX(0);
+}
+
+:global(html[data-theme="light"]) .sun {
+  color: var(--accent-ink);
+}
+
+:global(html[data-theme="light"]) .moon {
+  color: var(--foreground-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thumb {
+    transition: none;
+  }
+}

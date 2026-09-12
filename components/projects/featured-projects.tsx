@@ -11,8 +11,8 @@ export function FeaturedProjects() {
         <Reveal className="flex flex-col gap-7 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
             eyebrow="Selected work"
-            title="Proof lives in the product."
-            description="Real projects and working applications built by Vinay Kumar and presented through NextWeb Studio."
+            title="Explore the projects."
+            description="Two different product workflows: a creative interface and a grocery storefront. Open the demos or explore how they are built."
           />
           <ButtonLink
             href="/projects"

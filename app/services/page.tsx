@@ -1,16 +1,15 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import { Check } from "lucide-react";
 import { PageTransition } from "@/components/animations/page-transition";
 import { Reveal } from "@/components/animations/reveal";
-import { ContactCta } from "@/components/contact/contact-cta";
 import { PageHero } from "@/components/ui/page-hero";
 import { services } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "Services",
-  description:
-    "NextWeb Studio builds modern websites, full-stack applications, SaaS products, e-commerce platforms, dashboards, APIs, and AI-powered experiences.",
-};
+export const metadata = pageMetadata(
+  "Services",
+  "Website, full-stack, e-commerce, SaaS, dashboard, API and AI integration services, with performance improvements and ongoing support.",
+  "/services",
+);
 
 export default function ServicesPage() {
   return (
@@ -18,13 +17,14 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Services"
         title="What NextWeb Studio builds."
-        description="Focused development for startups, businesses, professionals, agencies, founders, and product teams—from polished websites to the systems behind them."
+        description="Choose a service around the problem you need to solve. Scope, integrations, and ongoing support are agreed for each project."
       />
       <section className="section-pad">
         <div className="container-shell space-y-5">
           {services.map(
             (
               {
+                id,
                 title,
                 description,
                 useCases,
@@ -35,13 +35,16 @@ export default function ServicesPage() {
               index,
             ) => (
               <Reveal key={title}>
-                <article className="glass-card glass-card-hover grid gap-8 rounded-3xl p-6 sm:p-9 lg:grid-cols-[0.75fr_1.25fr]">
+                <article
+                  id={id}
+                  className="glass-card glass-card-hover grid scroll-mt-28 gap-8 rounded-3xl p-6 sm:p-9 lg:grid-cols-[0.75fr_1.25fr]"
+                >
                   <div>
                     <div className="flex items-center gap-4">
-                      <span className="font-mono text-xs text-white/30">
+                      <span className="font-mono text-xs text-[var(--foreground-muted)]">
                         0{index + 1}
                       </span>
-                      <div className="grid size-11 place-items-center rounded-xl bg-[var(--accent)]/10 text-[var(--accent)]">
+                      <div className="grid size-11 place-items-center rounded-xl border border-[var(--border)] bg-[var(--surface-elevated)]/62 text-[var(--cyan)]">
                         <Icon size={21} />
                       </div>
                     </div>
@@ -52,20 +55,20 @@ export default function ServicesPage() {
                   </div>
                   <div className="grid gap-7 border-t border-[var(--border)] pt-7 sm:grid-cols-2 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-10">
                     <div>
-                      <p className="text-xs font-bold tracking-[0.14em] text-white/40 uppercase">
+                      <p className="text-xs font-bold tracking-[0.14em] text-[var(--foreground-muted)] uppercase">
                         Typical use cases
                       </p>
-                      <p className="mt-3 text-sm leading-7 text-white/75">
+                      <p className="mt-3 text-sm leading-7 text-[var(--foreground-secondary)]">
                         {useCases}
                       </p>
-                      <p className="mt-7 text-xs font-bold tracking-[0.14em] text-white/40 uppercase">
+                      <p className="mt-7 text-xs font-bold tracking-[0.14em] text-[var(--foreground-muted)] uppercase">
                         Technologies
                       </p>
                       <div className="mt-3 flex flex-wrap gap-2">
                         {technologies.map((technology) => (
                           <span
                             key={technology}
-                            className="rounded-full bg-white/5 px-3 py-1.5 text-xs text-white/60"
+                            className="rounded-full border border-[var(--border)] bg-[var(--surface-elevated)]/52 px-3 py-1.5 text-xs text-[var(--foreground-secondary)]"
                           >
                             {technology}
                           </span>
@@ -73,14 +76,14 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div>
-                      <p className="text-xs font-bold tracking-[0.14em] text-white/40 uppercase">
+                      <p className="text-xs font-bold tracking-[0.14em] text-[var(--foreground-muted)] uppercase">
                         Deliverables
                       </p>
                       <ul className="mt-3 grid gap-3">
                         {deliverables.map((item) => (
                           <li
                             key={item}
-                            className="flex items-center gap-3 text-sm text-white/75"
+                            className="flex items-center gap-3 text-sm text-[var(--foreground-secondary)]"
                           >
                             <Check size={15} className="text-[var(--accent)]" />
                             {item}
@@ -95,7 +98,6 @@ export default function ServicesPage() {
           )}
         </div>
       </section>
-      <ContactCta />
     </PageTransition>
   );
 }
