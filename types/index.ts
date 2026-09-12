@@ -3,6 +3,7 @@ export const projectCategories = [
   "Frontend",
   "Backend",
   "AI",
+  "E-commerce",
   "Showcase",
   "Open Source",
 ] as const;
@@ -56,6 +57,7 @@ export interface Project {
 export interface ContactInput {
   name: string;
   email: string;
+  phone: string;
   company?: string;
   projectType: string;
   budget: string;

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -11,7 +12,6 @@ import {
 } from "lucide-react";
 import { PageTransition } from "@/components/animations/page-transition";
 import { Reveal } from "@/components/animations/reveal";
-import { ContactCta } from "@/components/contact/contact-cta";
 import { ButtonLink } from "@/components/ui/button-link";
 import { getProject, projects } from "@/lib/projects";
 
@@ -27,7 +27,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const project = getProject(slug);
   return project
-    ? { title: project.title, description: project.shortDescription }
+    ? pageMetadata(
+        project.title,
+        project.shortDescription,
+        `/projects/${project.slug}`,
+      )
     : {};
 }
 
@@ -49,7 +53,7 @@ export default async function ProjectDetailPage({
           <Reveal>
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.13em] text-white/45 uppercase hover:text-white"
+              className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.13em] text-[var(--foreground-muted)] uppercase hover:text-[var(--foreground)]"
             >
               <ArrowLeft size={14} /> All projects
             </Link>
@@ -57,7 +61,7 @@ export default async function ProjectDetailPage({
               <div>
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="eyebrow">{project.primaryCategory}</span>
-                  <span className="text-xs text-white/40">
+                  <span className="text-xs text-[var(--foreground-muted)]">
                     {project.projectType}
                   </span>
                 </div>
@@ -109,27 +113,27 @@ export default async function ProjectDetailPage({
         <div className="container-shell grid gap-14 lg:grid-cols-[0.6fr_1.4fr]">
           <Reveal>
             <div className="lg:sticky lg:top-32">
-              <p className="text-xs font-bold tracking-[0.15em] text-white/35 uppercase">
+              <p className="text-xs font-bold tracking-[0.15em] text-[var(--foreground-muted)] uppercase">
                 Categories
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {project.categories.map((category) => (
                   <span
                     key={category}
-                    className="rounded-full border border-[var(--border)] px-3 py-1.5 text-xs text-white/65"
+                    className="rounded-full border border-[var(--border)] px-3 py-1.5 text-xs text-[var(--foreground-secondary)]"
                   >
                     {category}
                   </span>
                 ))}
               </div>
-              <p className="mt-8 text-xs font-bold tracking-[0.15em] text-white/35 uppercase">
+              <p className="mt-8 text-xs font-bold tracking-[0.15em] text-[var(--foreground-muted)] uppercase">
                 Technology
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {project.technologies.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-[var(--border)] px-3 py-1.5 text-xs text-white/65"
+                    className="rounded-full border border-[var(--border)] px-3 py-1.5 text-xs text-[var(--foreground-secondary)]"
                   >
                     {item}
                   </span>
@@ -169,7 +173,7 @@ export default async function ProjectDetailPage({
             </Reveal>
             {project.details?.map((detail) => (
               <Reveal key={detail.title}>
-                <div className="rounded-2xl border border-[var(--border)] bg-white/[0.025] p-6 sm:p-7">
+                <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)]/68 p-6 sm:p-7">
                   <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
                     {detail.title}
                   </h2>
@@ -252,7 +256,7 @@ export default async function ProjectDetailPage({
             className="group flex items-center justify-between rounded-2xl border border-[var(--border)] bg-[var(--surface)]/35 p-6 transition hover:border-[var(--border-hover)] sm:p-9"
           >
             <div>
-              <p className="text-xs tracking-[0.14em] text-white/35 uppercase">
+              <p className="text-xs tracking-[0.14em] text-[var(--foreground-muted)] uppercase">
                 Next case study
               </p>
               <p className="mt-2 text-2xl font-bold">{next.title}</p>
@@ -261,7 +265,6 @@ export default async function ProjectDetailPage({
           </Link>
         </div>
       </section>
-      <ContactCta />
     </PageTransition>
   );
 }

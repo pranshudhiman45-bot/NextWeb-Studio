@@ -1,13 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { siteConfig } from "@/lib/utils";
+import { themeScript } from "@/components/theme/theme-config";
+import { ThemeSync } from "@/components/theme/theme-store";
 import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "NextWeb Studio — Websites, Full Stack & AI Development",
+    default: "NextWeb Studio — Full Stack Web Development",
     template: "%s — NextWeb Studio",
   },
   description: siteConfig.description,
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "NextWeb Studio — built by Vinay Kumar",
+        alt: "NextWeb Studio — built by Pranshu Dhiman",
       },
     ],
   },
@@ -36,6 +38,14 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: ["/opengraph-image"],
   },
+};
+
+export const viewport: Viewport = {
+  colorScheme: "light dark",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f5f9ff" },
+    { media: "(prefers-color-scheme: dark)", color: "#020b18" },
+  ],
 };
 
 export default function RootLayout({
@@ -56,15 +66,21 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body id="top">
+        <ThemeSync />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+          }}
         />
         <a
           href="#main-content"
-          className="fixed top-3 left-4 z-[100] -translate-y-20 rounded-md bg-[var(--accent)] px-4 py-2 font-bold text-black focus:translate-y-0"
+          className="fixed top-3 left-4 z-[100] -translate-y-20 rounded-md bg-[var(--button-primary)] px-4 py-2 font-bold text-white focus:translate-y-0"
         >
           Skip to content
         </a>

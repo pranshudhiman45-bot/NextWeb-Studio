@@ -36,7 +36,7 @@ export function SolutionsGrid() {
                   href="/services"
                   className="group glass-card glass-card-hover flex h-full min-h-64 flex-col rounded-2xl p-6 sm:p-8"
                 >
-                  <div className="grid size-11 place-items-center rounded-xl border border-white/[0.08] bg-white/[0.04] text-[var(--accent)] backdrop-blur-md transition-colors group-hover:border-white/[0.14] group-hover:bg-white/[0.055]">
+                  <div className="grid size-11 place-items-center rounded-xl border border-[var(--border)] bg-[var(--surface-elevated)]/62 text-[var(--cyan)] backdrop-blur-md transition-colors group-hover:border-[var(--border-hover)] group-hover:bg-[var(--surface-strong)]/68">
                     <Icon size={21} />
                   </div>
                   <div className="mt-auto pt-12">
@@ -46,8 +46,8 @@ export function SolutionsGrid() {
                     <p className="mt-3 max-w-md text-sm leading-7 text-[var(--muted)]">
                       {description}
                     </p>
-                    <span className="mt-5 inline-flex items-center gap-2 text-xs font-bold tracking-[0.12em] text-white/55 uppercase group-hover:text-[var(--accent)]">
-                      Learn more <ArrowUpRight size={14} />
+                    <span className="mt-5 inline-flex items-center gap-2 text-xs font-bold tracking-[0.12em] text-[var(--foreground-muted)] uppercase group-hover:text-[var(--accent)]">
+                      View services <ArrowUpRight size={14} />
                     </span>
                   </div>
                 </Link>
