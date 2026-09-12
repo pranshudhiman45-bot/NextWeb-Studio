@@ -11,8 +11,6 @@ build/
 coverage/
 
 # Local environment files (keep the documented template)
-.env
-.env.*
 !.env.example
 
 # Logs
@@ -27,3 +25,4 @@ pnpm-debug.log*
 .vercel/
 *.tsbuildinfo
 next-env.d.ts
+config.bat

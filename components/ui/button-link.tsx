@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import motionStyles from "@/components/animations/studio-motion.module.css";
 import { cn } from "@/lib/utils";
 
 interface ButtonLinkProps {
@@ -19,10 +20,10 @@ export function ButtonLink({
 }: ButtonLinkProps) {
   const styles = {
     primary:
-      "bg-[var(--accent)] text-[var(--accent-ink)] hover:bg-[var(--accent-hover)] hover:shadow-[0_8px_30px_rgba(200,255,61,0.14)] hover:-translate-y-0.5 border-transparent",
+      "bg-[var(--button-primary)] text-[var(--accent-ink)] hover:bg-[var(--button-hover)] hover:shadow-[0_10px_32px_rgba(0,158,255,0.24)] motion-safe:hover:-translate-y-0.5 border-blue-200/15 shadow-[0_8px_24px_rgba(0,126,255,0.16)]",
     secondary:
-      "border-[var(--border)] bg-white/[0.025] text-white hover:border-[var(--accent)]/55 hover:bg-white/[0.045] hover:text-[var(--accent)]",
-    text: "border-transparent text-white hover:text-[var(--accent)] px-0",
+      "border-[var(--border)] bg-[var(--surface)]/65 text-[var(--foreground)] hover:border-[var(--border-hover)] hover:bg-[var(--surface-elevated)]/75 hover:text-[var(--cyan)]",
+    text: "border-transparent text-[var(--foreground)] hover:text-[var(--accent)] px-0",
   };
 
   const props = external ? { target: "_blank", rel: "noreferrer" } : undefined;
@@ -33,6 +34,7 @@ export function ButtonLink({
       className={cn(
         "group inline-flex min-h-12 items-center justify-center gap-2 rounded-full border px-5 text-sm font-bold transition-all duration-300",
         styles[variant],
+        variant === "primary" && motionStyles.sweep,
         className,
       )}
       {...props}
@@ -40,7 +42,7 @@ export function ButtonLink({
       {children}
       <ArrowUpRight
         size={16}
-        className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+        className="group-motion-safe:hover:-translate-y-0.5 transition-transform duration-300 group-hover:translate-x-0.5"
       />
     </Link>
   );

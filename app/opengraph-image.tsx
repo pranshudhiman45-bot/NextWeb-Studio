@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "NextWeb Studio — built by Vinay Kumar";
+export const alt = "NextWeb Studio — built by Pranshu Dhiman";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -9,8 +9,8 @@ export default function OpenGraphImage() {
     <div
       style={{
         alignItems: "center",
-        background: "#080a0b",
-        color: "#f5f5f2",
+        background: "#020b18",
+        color: "#ffffff",
         display: "flex",
         height: "100%",
         justifyContent: "center",
@@ -21,7 +21,7 @@ export default function OpenGraphImage() {
       <div
         style={{
           backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px)",
+            "linear-gradient(rgba(46,144,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(46,144,255,0.08) 1px, transparent 1px)",
           backgroundSize: "48px 48px",
           display: "flex",
           inset: 0,
@@ -31,7 +31,7 @@ export default function OpenGraphImage() {
       <div
         style={{
           background:
-            "radial-gradient(circle, rgba(200,255,61,0.16), transparent 66%)",
+            "radial-gradient(circle, rgba(0,158,255,0.23), rgba(16,217,245,0.06) 34%, transparent 68%)",
           display: "flex",
           height: 540,
           position: "absolute",
@@ -52,7 +52,7 @@ export default function OpenGraphImage() {
       >
         <div
           style={{
-            color: "#c8ff3d",
+            color: "#10d9f5",
             display: "flex",
             fontSize: 24,
             fontWeight: 700,
@@ -78,13 +78,13 @@ export default function OpenGraphImage() {
         </div>
         <div
           style={{
-            color: "#a1a1aa",
+            color: "#c7d3e3",
             display: "flex",
             fontSize: 24,
             marginTop: 10,
           }}
         >
-          Built by Vinay Kumar · Full Stack Developer
+          Built by Pranshu Dhiman · Full Stack Developer
         </div>
       </div>
     </div>,

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Calendar, Clock3, Mail } from "lucide-react";
 import { PageTransition } from "@/components/animations/page-transition";
@@ -8,11 +8,11 @@ import { PageHero } from "@/components/ui/page-hero";
 import { siteConfig } from "@/lib/utils";
 import { getProjectTypeFromQuery } from "@/lib/validations";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Tell Vinay Kumar what you are building and discuss how NextWeb Studio can help.",
-};
+export const metadata = pageMetadata(
+  "Contact",
+  "Discuss your website, application or integration with Pranshu Dhiman at NextWeb Studio.",
+  "/contact",
+);
 
 const allowedSources = new Set([
   "contact-page",
@@ -22,6 +22,7 @@ const allowedSources = new Set([
   "solution-selector",
   "project-page",
   "showcase-ecommerce",
+  "product-reveal",
 ]);
 
 export default async function ContactPage({
@@ -60,8 +61,8 @@ export default async function ContactPage({
                 Work directly with the founder.
               </h2>
               <p className="muted-copy mt-4 text-sm">
-                Every inquiry goes directly to Vinay Kumar. Use the project
-                brief for the most useful response.
+                Share your goals, scope, and timing so Pranshu Dhiman can review
+                the project. You can also use the email link below.
               </p>
               <div className="mt-8 grid gap-3">
                 {siteConfig.email ? (
@@ -73,11 +74,11 @@ export default async function ContactPage({
                     <span className="grid size-10 place-items-center rounded-xl bg-[var(--accent)]/10 text-[var(--accent)]">
                       <Mail size={18} />
                     </span>
-                    <span>
-                      <span className="block text-xs text-white/40">
+                    <span className="min-w-0">
+                      <span className="block text-xs text-[var(--foreground-muted)]">
                         Email me
                       </span>
-                      <span className="mt-1 block text-sm font-semibold">
+                      <span className="mt-1 block text-sm font-semibold break-words">
                         {siteConfig.email}
                       </span>
                     </span>
@@ -92,24 +93,25 @@ export default async function ContactPage({
                     <span className="grid size-10 place-items-center rounded-xl bg-[var(--accent)]/10 text-[var(--accent)]">
                       <Calendar size={18} />
                     </span>
-                    <span>
-                      <span className="block text-xs text-white/40">
+                    <span className="min-w-0">
+                      <span className="block text-xs text-[var(--foreground-muted)]">
                         Book a call
                       </span>
-                      <span className="mt-1 block text-sm font-semibold">
+                      <span className="mt-1 block text-sm font-semibold break-words">
                         Find a time that works
                       </span>
                     </span>
                   </Link>
                 ) : null}
               </div>
-              <div className="mt-8 flex items-center gap-3 text-sm text-white/45">
+              <div className="mt-8 flex items-center gap-3 text-sm text-[var(--foreground-muted)]">
                 <Clock3 size={17} /> Built and led by {siteConfig.founder}
               </div>
             </div>
           </Reveal>
           <Reveal delay={0.08}>
             <ContactForm
+              key={`${initialProjectType ?? "default"}:${source}`}
               initialProjectType={initialProjectType}
               source={source}
             />
