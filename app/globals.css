@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
-:root {
+:root,
+.studio-footer {
   --background: #020b18;
   --surface: #031426;
   --surface-elevated: #071c35;
@@ -19,6 +20,121 @@
   --cyan: #10d9f5;
   --glow-blue: rgba(0, 126, 255, 0.22);
   --glow-cyan: rgba(16, 217, 245, 0.14);
+  --background-secondary: #031426;
+  --primary: #087cff;
+  --primary-bright: #009eff;
+  --button-primary: #0870ed;
+  --button-hover: #0864d6;
+  --input-background: rgba(7, 28, 53, 0.52);
+  --input-border: rgba(129, 147, 168, 0.6);
+  --nav-background: rgba(2, 11, 24, 0.92);
+  --nav-idle: rgba(2, 11, 24, 0.15);
+  --nav-shadow:
+    0 14px 46px rgba(0, 8, 24, 0.48), 0 0 34px rgba(0, 126, 255, 0.045);
+  --card-background: rgba(3, 20, 38, 0.88);
+  --card-tint: rgba(17, 67, 116, 0.2);
+  --glass-background: rgba(3, 20, 38, 0.9);
+  --glass-card-background: rgba(3, 20, 38, 0.84);
+  --shadow: rgba(0, 6, 17, 0.38);
+  --card-shadow: inset 0 1px 0 rgba(151, 204, 255, 0.035);
+  --danger: #fca5a5;
+  --warning: #fcd34d;
+  --tab-active-background: transparent;
+}
+
+/* Deeper text accents keep small labels and gradient headings readable. */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --background: #f5f9ff;
+  --background-secondary: #eef5ff;
+  --surface: #ffffff;
+  --surface-elevated: #f7faff;
+  --surface-strong: #e6f0ff;
+  --foreground: #0b1728;
+  --foreground-secondary: #52647a;
+  --foreground-muted: #5e7086;
+  --muted: var(--foreground-secondary);
+  --border: rgba(8, 124, 255, 0.16);
+  --border-hover: rgba(8, 124, 255, 0.4);
+  --line: var(--border);
+  --accent: #0667d8;
+  --accent-hover: #055aba;
+  --accent-soft: rgba(8, 124, 255, 0.07);
+  --cyan: #087b98;
+  --glow-blue: rgba(8, 124, 255, 0.1);
+  --glow-cyan: rgba(16, 191, 234, 0.06);
+  --input-background: #ffffff;
+  --input-border: #8199b6;
+  --nav-background: rgba(247, 250, 255, 0.94);
+  --nav-idle: rgba(245, 249, 255, 0.7);
+  --nav-shadow: 0 14px 46px rgba(21, 65, 115, 0.09);
+  --card-background: #ffffff;
+  --card-tint: rgba(8, 124, 255, 0.025);
+  --glass-background: rgba(255, 255, 255, 0.94);
+  --glass-card-background: rgba(255, 255, 255, 0.92);
+  --shadow: rgba(21, 65, 115, 0.09);
+  --card-shadow: 0 12px 40px rgba(21, 65, 115, 0.045);
+  --danger: #b42336;
+  --warning: #805000;
+  --tab-active-background: var(--accent-soft);
+  --viz-panel: #ffffff;
+  --viz-inset: #f0f6ff;
+  --viz-active: #e4f0ff;
+  --viz-text: #142b46;
+  --viz-muted: #526b84;
+  --viz-line: #88a9cf;
+  --viz-blue: #0867c9;
+  --viz-cyan: #087f9e;
+  --viz-dot: #6d88a7;
+  --viz-shadow: 0 24px 70px rgba(24, 77, 134, 0.1), inset 0 1px 0 #ffffff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    color-scheme: light;
+    --background: #f5f9ff;
+    --background-secondary: #eef5ff;
+    --surface: #ffffff;
+    --surface-elevated: #f7faff;
+    --surface-strong: #e6f0ff;
+    --foreground: #0b1728;
+    --foreground-secondary: #52647a;
+    --foreground-muted: #5e7086;
+    --muted: var(--foreground-secondary);
+    --border: rgba(8, 124, 255, 0.16);
+    --border-hover: rgba(8, 124, 255, 0.4);
+    --line: var(--border);
+    --accent: #0667d8;
+    --accent-hover: #055aba;
+    --accent-soft: rgba(8, 124, 255, 0.07);
+    --cyan: #087b98;
+    --glow-blue: rgba(8, 124, 255, 0.1);
+    --glow-cyan: rgba(16, 191, 234, 0.06);
+    --input-background: #ffffff;
+    --input-border: #8199b6;
+    --nav-background: rgba(247, 250, 255, 0.94);
+    --nav-idle: rgba(245, 249, 255, 0.7);
+    --nav-shadow: 0 14px 46px rgba(21, 65, 115, 0.09);
+    --card-background: #ffffff;
+    --card-tint: rgba(8, 124, 255, 0.025);
+    --glass-background: rgba(255, 255, 255, 0.94);
+    --glass-card-background: rgba(255, 255, 255, 0.92);
+    --shadow: rgba(21, 65, 115, 0.09);
+    --card-shadow: 0 12px 40px rgba(21, 65, 115, 0.045);
+    --danger: #b42336;
+    --warning: #805000;
+    --tab-active-background: var(--accent-soft);
+    --viz-panel: #ffffff;
+    --viz-inset: #f0f6ff;
+    --viz-active: #e4f0ff;
+    --viz-text: #142b46;
+    --viz-muted: #526b84;
+    --viz-line: #88a9cf;
+    --viz-blue: #0867c9;
+    --viz-cyan: #087f9e;
+    --viz-dot: #6d88a7;
+    --viz-shadow: 0 24px 70px rgba(24, 77, 134, 0.1), inset 0 1px 0 #ffffff;
+  }
 }
 
 * {
@@ -60,7 +176,7 @@ body::before {
 }
 
 ::selection {
-  background: var(--accent);
+  background: var(--button-primary);
   color: white;
 }
 
@@ -132,9 +248,9 @@ a {
 .card-surface {
   border: 1px solid var(--border);
   background:
-    linear-gradient(145deg, rgba(17, 67, 116, 0.2), transparent 58%),
-    rgba(3, 20, 38, 0.88);
-  box-shadow: inset 0 1px 0 rgba(151, 204, 255, 0.035);
+    linear-gradient(145deg, var(--card-tint), transparent 58%),
+    var(--card-background);
+  box-shadow: var(--card-shadow);
 }
 
 .glass-surface {
@@ -145,9 +261,9 @@ a {
       rgba(31, 111, 190, 0.14),
       rgba(3, 20, 38, 0.02) 55%
     ),
-    rgba(3, 20, 38, 0.9);
+    var(--glass-background);
   box-shadow:
-    0 28px 80px rgba(0, 6, 17, 0.42),
+    0 28px 80px var(--shadow),
     0 0 60px rgba(0, 126, 255, 0.045),
     inset 0 1px 0 rgba(133, 194, 255, 0.08);
   backdrop-filter: blur(24px);
@@ -157,7 +273,7 @@ a {
   border: 1px solid var(--border);
   background:
     linear-gradient(145deg, rgba(20, 83, 145, 0.12), transparent 58%),
-    rgba(3, 20, 38, 0.84);
+    var(--glass-card-background);
   box-shadow: inset 0 1px 0 rgba(133, 194, 255, 0.055);
   backdrop-filter: blur(14px);
 }
@@ -186,7 +302,7 @@ a {
     linear-gradient(135deg, rgba(24, 89, 153, 0.18), rgba(3, 20, 38, 0.04)),
     var(--surface);
   box-shadow:
-    0 30px 90px rgba(0, 6, 17, 0.38),
+    0 30px 90px var(--shadow),
     0 0 80px rgba(0, 126, 255, 0.04),
     inset 0 1px 0 rgba(133, 194, 255, 0.07);
   backdrop-filter: blur(24px);
@@ -196,7 +312,7 @@ a {
   .glass-card-hover:hover {
     border-color: var(--border-hover);
     box-shadow:
-      0 18px 55px rgba(0, 6, 17, 0.34),
+      0 18px 55px var(--shadow),
       0 0 40px rgba(0, 126, 255, 0.075),
       inset 0 1px 0 rgba(133, 194, 255, 0.08);
   }
@@ -226,5 +342,38 @@ a {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+html {
+  color-scheme: dark;
+  scrollbar-color: var(--foreground-muted) var(--background);
+}
+html[data-theme="light"] {
+  color-scheme: light;
+}
+select option {
+  color: var(--foreground);
+  background: var(--surface);
+}
+.studio-footer {
+  color-scheme: dark;
+}
+
+html[data-theme-ready="true"] body,
+html[data-theme-ready="true"] .card-surface,
+html[data-theme-ready="true"] .glass-surface,
+html[data-theme-ready="true"] .glass-card,
+html[data-theme-ready="true"] .cta-panel,
+html[data-theme-ready="true"] .theme-switcher {
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-theme-ready="true"] body,
+  html[data-theme-ready="true"] .theme-switcher {
+    transition: none;
   }
 }

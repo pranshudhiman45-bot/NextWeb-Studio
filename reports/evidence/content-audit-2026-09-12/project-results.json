@@ -1,0 +1,112 @@
+[
+  {
+    "project": "Ryora",
+    "landing": 200,
+    "registrationPage": "Features\nStudio\nPricing\nReviews\nCreate free\nNew\nGemini-directed prompts are live\n\nTurn\na\nsentence\ninto\na\nworld\nin\nmotion\n\nDescribe a scene and Ryora directs it — style, framing, lighting, and motion resolved for you. No timeline, no keyframes, no editing experience required.\n\nStart creating free\nSee the studio\n\n38 sec\n\nAverage time from prompt to finished scene\n\n11\n\nAnimation styles, from Ghibli to Cyberpunk\n\nEleven directed styles, one prompt away\nPixar\nGhibli\nAnime\nClaymation\nCyberpunk\nRyora\nFile\nEdit\nView\nStyle\nWindow\nHelp\nSat, Sep 12 · 3:29 PM\nA studio built for one prompt at a time.\nA \nstudio \nbuilt \nfor \none \nprompt \nat \na \ntime.\n\nRyora — Studio\n\nNew generation\nDashboard\nVideos\n12\nFavorites\n3\nHistory\nProfile\nSettings\n\nSTYLES\n\nStudio Ghibli\nPixar\nCyberpunk\nClaymation\nSearch your library\n\nBaby dragon over a glowing forest\n\n9:41 AM\n\nStudio Ghibli · 5s · 16:9\n\nFox astronaut drifting past a nebula\n\n8:12 AM\n\nPixar · 10s · 16:9\n\nNeon rooftop chase in the rain\n\nYesterday\n\nCyberpunk · 15s · 9:16\n\nClay robot tending a rooftop garden\n\nYesterday\n\nClaymation · 5s · 1:1\n\nPaper boat down a monsoon street\n\nMon\n\nAnime · 10s · 16:9\n\nLighthouse keeper feeding gulls\n\nMon\n\nDisney · 5s · 16:9\n\nBaby dragon over a glowing forest\n\nPrompt enhanced by Ryora\n\nCinematic Studio Ghibli animation, expressive character detail, drifting fireflies, gentle camera push, warm atmospheric lighting.\n\nCAPABILITIES\n\nDirection resolved\nDirection \nresolved\nScene framing\nCamera motion\nMood + palette\nSafety checked\nDirected prompts\nDirected \nprompts\n\nGemini expands your sentence into full art direction — environment, lighting, movement, and colour — before a single frame renders.\n\nGhibli\nPixar\nCyberpunk\nClaymation\nEleven styles\nEleven \nstyles\n\nSwap the entire visual language of a scene without rewriting the prompt. Same idea, rendered as anime, clay, comic, or photoreal 3D.\n\nInstant replay\nFavorites\nDownload\nFull history\nYour library\nYour \nlibrary\n\nEvery generation is kept with its original and enhanced prompt, so you can trace what produced a result and return to it later.\n\nYour ideas.\nAnimated.\n\nFree\n\n$0\n\nFor creators making their first scene with Ryora.\n\n1 free video generation\n720p export\nAll eleven animation styles\nFull prompt history\nLibrary, favorites, and downloads\nGet started\n\nStandard\n\nSoon\n\nFor creators who need more room to explore ideas.\n\nGenerous monthly generations\n1080p export\nPriority rendering queue\nNo watermark\nLonger durations\nComing soon\n\nPro\n\nSoon\n\nFor studios and teams producing at volume.\n\nUnlimited generations\n4K export\nFastest rendering\nTeam workspaces\nBrand style presets\nComing soon\n\nYour\nnext\nscene\nstarts\nhere.\n\nYour first generation is free. Describe a scene, pick a style, and watch Ryora direct it. No card, no timeline, no editing experience.\n\nStart creating free\nView pricing\n© 2026 Ryora. All rights reserved.\nFeatures\nStudio\nPricing",
+    "authenticationTested": false,
+    "videoGenerationTested": false
+  },
+  {
+    "project": "Buy Best",
+    "catalog": true,
+    "search": true,
+    "inputs": [
+      {
+        "placeholder": "",
+        "type": "search",
+        "aria": null
+      },
+      {
+        "placeholder": "",
+        "type": "search",
+        "aria": null
+      },
+      {
+        "placeholder": "",
+        "type": "checkbox",
+        "aria": null
+      },
+      {
+        "placeholder": "",
+        "type": "radio",
+        "aria": null
+      },
+      {
+        "placeholder": "",
+        "type": "radio",
+        "aria": null
+      },
+      {
+        "placeholder": "",
+        "type": "radio",
+        "aria": null
+      },
+      {
+        "placeholder": "",
+        "type": "radio",
+        "aria": null
+      },
+      {
+        "placeholder": "",
+        "type": "radio",
+        "aria": null
+      },
+      {
+        "placeholder": "",
+        "type": "radio",
+        "aria": null
+      },
+      {
+        "placeholder": "",
+        "type": "radio",
+        "aria": null
+      },
+      {
+        "placeholder": "",
+        "type": "radio",
+        "aria": null
+      },
+      {
+        "placeholder": "",
+        "type": "radio",
+        "aria": null
+      },
+      {
+        "placeholder": "",
+        "type": "radio",
+        "aria": null
+      },
+      {
+        "placeholder": "",
+        "type": "radio",
+        "aria": null
+      },
+      {
+        "placeholder": "",
+        "type": "range",
+        "aria": null
+      },
+      {
+        "placeholder": "",
+        "type": "radio",
+        "aria": null
+      },
+      {
+        "placeholder": "",
+        "type": "radio",
+        "aria": null
+      },
+      {
+        "placeholder": "",
+        "type": "radio",
+        "aria": null
+      },
+      {
+        "placeholder": "",
+        "type": "radio",
+        "aria": null
+      }
+    ],
+    "paymentTested": false
+  }
+]

@@ -1,4 +1,5 @@
 import { ButtonLink } from "@/components/ui/button-link";
+import { AmbientMotion } from "@/components/animations/ambient-motion";
 import { siteConfig } from "@/lib/utils";
 
 export function ContactCta() {
@@ -6,6 +7,7 @@ export function ContactCta() {
     <section className="section-pad">
       <div className="container-shell">
         <div className="cta-panel relative overflow-hidden rounded-3xl px-6 py-14 sm:px-12 sm:py-20 lg:px-20">
+          <AmbientMotion variant="border" />
           <div className="pointer-events-none absolute -top-20 -right-16 size-64 rounded-full border border-[var(--border)] opacity-35" />
           <div className="pointer-events-none absolute top-8 right-6 size-36 rounded-full border border-[var(--cyan)]/10" />
           <div className="grid-lines pointer-events-none absolute top-0 right-0 h-56 w-80 opacity-[0.08]" />
@@ -17,8 +19,8 @@ export function ContactCta() {
             <span className="block">Let’s build something great.</span>
           </h2>
           <p className="relative mt-6 max-w-xl text-sm leading-7 text-[var(--foreground-secondary)] sm:text-base">
-            Tell NextWeb Studio what you’re planning and let’s turn it into a
-            fast, polished and scalable digital product.
+            Share the problem, your users, and the first features you need.
+            NextWeb Studio can help you define a practical scope.
           </p>
           <div className="relative mt-9 flex flex-col gap-3 sm:flex-row">
             <ButtonLink href="/contact?source=cta">Start a Project</ButtonLink>

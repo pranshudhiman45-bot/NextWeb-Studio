@@ -46,8 +46,8 @@ export function SolutionsGrid() {
                     <p className="mt-3 max-w-md text-sm leading-7 text-[var(--muted)]">
                       {description}
                     </p>
-                    <span className="mt-5 inline-flex items-center gap-2 text-xs font-bold tracking-[0.12em] text-white/55 uppercase group-hover:text-[var(--accent)]">
-                      Learn more <ArrowUpRight size={14} />
+                    <span className="mt-5 inline-flex items-center gap-2 text-xs font-bold tracking-[0.12em] text-[var(--foreground-muted)] uppercase group-hover:text-[var(--accent)]">
+                      View services <ArrowUpRight size={14} />
                     </span>
                   </div>
                 </Link>

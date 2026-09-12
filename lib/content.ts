@@ -57,29 +57,31 @@ export const solutions = [
 
 export const services = [
   {
+    id: "website-development",
     title: "Custom Website Development",
     shortTitle: "Website Development",
     description:
-      "Premium marketing and business websites engineered for trust, speed, and conversion.",
+      "Responsive websites for businesses and professionals who need to explain their services, present their work, and receive inquiries.",
     useCases:
       "Company sites, product launches, service businesses, editorial platforms",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     deliverables: [
       "UX direction",
       "Responsive build",
-      "CMS integration",
+      "Content structure",
       "SEO foundation",
     ],
     icon: Globe2,
   },
   {
+    id: "full-stack-applications",
     title: "Full Stack Web Applications",
     shortTitle: "Full Stack Applications",
     description:
-      "End-to-end product development from interface architecture to resilient business logic.",
+      "Connected interfaces, APIs, and databases for businesses building customer portals, internal tools, or web applications.",
     useCases:
       "Customer portals, internal tools, marketplaces, workflow products",
-    technologies: ["Next.js", "Node.js", "PostgreSQL", "MongoDB"],
+    technologies: ["Next.js", "Node.js", "Express", "MongoDB"],
     deliverables: [
       "Product architecture",
       "Frontend and backend",
@@ -89,22 +91,24 @@ export const services = [
     icon: Layers3,
   },
   {
+    id: "saas-development",
     title: "SaaS Development",
     shortTitle: "SaaS Development",
     description:
-      "Focused SaaS MVPs and foundations that support real customers, teams, and billing.",
+      "Subscription product development for founders who need a focused first release, account workflows, and a plan for future features.",
     useCases:
       "B2B platforms, subscription products, team workspaces, vertical SaaS",
-    technologies: ["Next.js", "PostgreSQL", "Stripe", "Docker"],
+    technologies: ["Next.js", "TypeScript", "MongoDB", "Stripe"],
     deliverables: [
       "MVP scope",
-      "Multi-tenant core",
+      "Account and access model",
       "Billing workflows",
       "Admin systems",
     ],
     icon: Braces,
   },
   {
+    id: "e-commerce",
     title: "E-commerce Development",
     shortTitle: "E-commerce",
     description:
@@ -121,6 +125,7 @@ export const services = [
     icon: ShoppingBag,
   },
   {
+    id: "dashboards",
     title: "Dashboard Development",
     shortTitle: "Dashboards",
     description:
@@ -137,28 +142,30 @@ export const services = [
     icon: ChartNoAxesCombined,
   },
   {
+    id: "backend-api",
     title: "Backend & API Development",
     shortTitle: "Backend & APIs",
     description:
-      "Typed, observable backend services that connect products, data, and external systems.",
+      "APIs and server-side workflows for teams connecting an existing frontend, a database, or an external service.",
     useCases: "REST APIs, integrations, background jobs, data services",
-    technologies: ["Node.js", "FastAPI", "Redis", "Docker"],
+    technologies: ["Node.js", "Express", "Next.js server-side APIs", "MongoDB"],
     deliverables: [
       "API design",
       "Service implementation",
       "Documentation",
-      "Monitoring hooks",
+      "Validation and error handling",
     ],
     icon: ServerCog,
   },
   {
+    id: "ai-integration",
     title: "AI Integration",
     shortTitle: "AI Integrations",
     description:
-      "Useful AI capabilities designed around human workflows, quality controls, and cost.",
+      "Language-model integrations for businesses adding prompt assistance, content processing, or conversational features to an application.",
     useCases:
-      "Knowledge search, content workflows, copilots, intelligent automation",
-    technologies: ["Python", "FastAPI", "OpenAI", "Vector search"],
+      "Prompt enhancement, content workflows, conversational interfaces",
+    technologies: ["Node.js", "Next.js", "LLM APIs"],
     deliverables: [
       "Use-case design",
       "AI workflow",
@@ -168,6 +175,7 @@ export const services = [
     icon: Bot,
   },
   {
+    id: "performance-optimization",
     title: "Website Performance Optimization",
     shortTitle: "Performance Optimization",
     description:
@@ -184,16 +192,17 @@ export const services = [
     icon: Gauge,
   },
   {
+    id: "maintenance-support",
     title: "Maintenance & Support",
     shortTitle: "Maintenance & Support",
     description:
-      "Ongoing product care for teams that need dependable iteration without a full-time hire.",
+      "Bug fixes, dependency updates, and small feature releases for businesses maintaining an existing website or application.",
     useCases:
       "Feature releases, bug fixes, dependency upgrades, production support",
-    technologies: ["GitHub", "Monitoring", "CI/CD", "Cloud platforms"],
+    technologies: ["Git", "GitHub", "Vercel", "Render"],
     deliverables: [
-      "Regular releases",
-      "Health checks",
+      "Agreed release schedule",
+      "Application checks",
       "Issue response",
       "Technical guidance",
     ],
@@ -203,7 +212,7 @@ export const services = [
 
 export const technologies = {
   Frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-  Backend: ["Node.js", "Express", "Python", "Django", "FastAPI"],
-  Database: ["MongoDB", "PostgreSQL", "MySQL", "Redis"],
-  Other: ["Docker", "Git", "GitHub", "REST APIs", "AI integrations"],
+  Backend: ["Node.js", "Express", "Next.js server-side APIs", "REST APIs"],
+  Database: ["MongoDB", "Mongoose"],
+  Other: ["Git", "GitHub", "Vercel", "Render", "LLM API integrations"],
 };

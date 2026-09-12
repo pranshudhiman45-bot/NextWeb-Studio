@@ -16,18 +16,17 @@ export function AboutPreview() {
         <Reveal>
           <span className="eyebrow">About NextWeb Studio</span>
           <h2 className="section-title mt-6">
-            An independent studio from idea to dependable product.
+            Work directly with the developer.
           </h2>
         </Reveal>
         <Reveal delay={0.08}>
           <p className="muted-copy text-lg">
-            NextWeb Studio is the development studio of Pranshu Dhiman, working
-            across product thinking, interface design, and full-stack
-            engineering.
+            Pranshu Dhiman brings the interface, APIs, and data model together,
+            with one point of contact from project planning to delivery.
           </p>
           <p className="muted-copy mt-5">
-            The focus is simple: understand the business problem, remove
-            unnecessary complexity, and ship an experience that earns trust.
+            Start with the problem your users need to solve, agree on a useful
+            first version, and build it in clear, reviewable steps.
           </p>
           <ul className="mt-7 grid gap-3 sm:grid-cols-2">
             {principles.map((principle) => (

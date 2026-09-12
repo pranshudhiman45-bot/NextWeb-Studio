@@ -73,7 +73,7 @@ export function BrandLogo({
       <BrandMark />
       {compact ? null : (
         <span className="leading-none">
-          <span className="block text-base font-extrabold tracking-[-0.045em] text-white sm:text-lg">
+          <span className="block text-base font-extrabold tracking-[-0.045em] text-[var(--foreground)] sm:text-lg">
             Next
             <span className="bg-gradient-to-r from-[var(--accent)] to-[var(--cyan)] bg-clip-text text-transparent">
               Web
